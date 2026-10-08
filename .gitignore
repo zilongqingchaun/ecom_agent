@@ -1,0 +1,7 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+/app/rag/backends/chroma_db/
+/框架实现/
