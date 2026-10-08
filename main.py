@@ -2,8 +2,18 @@
 
 
 
+import sys
+
 from app.settings.settings import settings
+
+
 def main():
+    # Windows 控制台默认编码可能无法输出模型回复中的 emoji。
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8")
+
     #从settings导入配置
     if settings.model_mode == "multiple":
         from app.agent.ecom_multiple_agent import ecom_multiple_agent
@@ -18,25 +28,32 @@ def main():
         pass
     #返回的应该是一个openai对象，然后这里导入输入
     #写一个循环，开始对话,目前支持退出和继续对话
-    while True:
-        input_text = input("请输入您的问题：").strip()
+    try:
+        while True:
+            input_text = input("请输入您的问题：").strip()
 
-        if not input_text:
-            print("输入不能为空，请重新输入。")
-            continue
+            if not input_text:
+                print("输入不能为空，请重新输入。")
+                continue
 
-        if input_text.lower() in ["exit", "quit"]:
-            print("退出对话。")
-            break
-        #假设经过上述两步得到了输入context
-        try:
-            response=agent.chat(input_text)
-            print("Agent的回答：", response)
-        except Exception as e:
-            print("调用Agent时发生错误：", str(e))
-
-
-
+            if input_text.lower() in ["exit", "quit"]:
+                print("退出对话。")
+                break
+            #假设经过上述两步得到了输入context
+            try:
+                response=agent.chat(input_text)
+                print("Agent的回答：", response)
+            except Exception as e:
+                print("调用Agent时发生错误：", str(e))
+    except (KeyboardInterrupt, EOFError):
+        print("\n退出对话。")
+    finally:
+        close = getattr(agent, "close", None)
+        if callable(close):
+            try:
+                close()
+            except Exception as exc:
+                print("保存长期记忆失败：", str(exc))
 
 
 if __name__ == "__main__":

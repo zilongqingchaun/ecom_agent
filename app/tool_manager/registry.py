@@ -3,7 +3,7 @@ from app.tool_manager.list_user_orders import list_user_orders
 from app.tool_manager.query_logistics import query_logistics
 from app.tool_manager.query_order import query_order
 from app.tool_manager.query_product import query_product
-
+from app.tool_manager.rag_tool import rag_search
 
 # 工具名称到实际 Python 函数的映射，供 Tool_Manager.call_tool 使用。
 tool_mapping = {
@@ -12,6 +12,7 @@ tool_mapping = {
     "query_product": query_product,
     "query_logistics": query_logistics,
     "apply_refund": apply_refund,
+    "rag_search": rag_search,
 }
 
 
@@ -85,6 +86,20 @@ tool_definition: list[dict] = [
                     "reason": {"type": "string", "description": "退款原因"},
                 },
                 "required": ["order_id", "reason"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "rag_search",
+            "description": "检索并夕夕的退换货政策、配送说明、会员权益和常见问题知识库。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {"type": "string", "description": "需要检索的政策、规则或帮助问题"},
+                },
+                "required": ["query"],
             },
         },
     },

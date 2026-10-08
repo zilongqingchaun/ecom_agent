@@ -21,11 +21,10 @@ class ShortTermMemory:
     def extract_facts(self,message:str)->str:
         # 这里可以调用模型来提取关键信息, 添加提示词
         response = self.client.chat.completions.create(model=self.model,
-                                                        messages=[{"role": "system", "content": STM_EXTRACTION_PROMPT.format(existing_stm="\n".join(self.short_term_facts))},
+                                                        messages=[{"role": "system", "content": STM_EXTRACTION_PROMPT.format(existing_facts="\n".join(self.short_term_facts))},
                                                                   {"role": "user", "content": message}],    
-                                                    temperature=0.5,
-                                                    max_tokens=150,
-                                                    n=1,)
+                                                    temperature=settings.memory_temperature,
+                                                    )
         content = response.choices[0].message.content or ""
 
         return content

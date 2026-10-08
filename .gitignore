@@ -5,3 +5,7 @@ __pycache__/
 *.py[cod]
 /app/rag/backends/chroma_db/
 /框架实现/
+.env.*
+!.env.example
+/sessions/
+/memories/

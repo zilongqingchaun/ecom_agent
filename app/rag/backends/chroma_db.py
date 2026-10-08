@@ -46,14 +46,14 @@ class chroma_backend:
         if not self.preset_path.exists():
             self.preset_path.mkdir(parents=True, exist_ok=True)
         #设立永久化客户都
-        self.chroma_client=chromadb.PersistentClient(path=self.preset_path)
+        self.chroma_client=chromadb.PersistentClient(path=str(self.preset_path))
         # 读取或新建表
         self.chroma=self.chroma_client.get_or_create_collection(name=self.collection_name)
         
     def search(self,query:str):
         #在chroma数据库中进行检索 并返回检索结果
         query_embedding=embedding.embed_queries(query)
-        results=self.chroma.query(query_embeddings=query_embedding,n_results=5)
+        results=self.chroma.query(query_embeddings=query_embedding,n_results=settings.rag_top_k)
         return results
 
 ecom_chroma_backend=chroma_backend()

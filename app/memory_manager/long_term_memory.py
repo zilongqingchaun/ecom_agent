@@ -52,7 +52,7 @@ class LongTermMemory:
         response = self.client.chat.completions.create(
             model=settings.model_name,
             messages=messages,
-            temperature=0,                              # 抽取任务用 0
+            temperature=settings.memory_temperature,                              # 抽取任务用 0
             response_format={"type": "json_object"},    # 强制 JSON
         )
 
