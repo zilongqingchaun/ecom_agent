@@ -1,0 +1,1 @@
+python -m app.evaluation.run_eval --output evaluation_report.json

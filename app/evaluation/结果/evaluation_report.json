@@ -1,0 +1,504 @@
+{
+  "summary": {
+    "total": 11,
+    "passed": 6,
+    "pass_rate": 0.5454545454545454,
+    "avg_process_score": 0.8844444444444445,
+    "avg_result_score": 0.9149999999999998,
+    "total_tokens": 62906,
+    "avg_tokens_per_case": 5718.727272727273
+  },
+  "cases": [
+    {
+      "case_id": "order_query_basic",
+      "description": "查询已发货订单详情",
+      "passed": true,
+      "process": {
+        "tool_accuracy": 1.0,
+        "tool_efficiency": 1.0,
+        "token_cost": 6569,
+        "token_pass": true,
+        "process_soundness": 1.0,
+        "route_match": null,
+        "process_score": 1.0
+      },
+      "result": {
+        "intent_match": 1.0,
+        "keyword_coverage": 1.0,
+        "requires_human_match": 1.0,
+        "answer_quality": 1.0,
+        "faithfulness": 1.0,
+        "result_score": 1.0
+      },
+      "judge_reasons": {
+        "answer_quality": "回复准确完整地提供了订单状态、商品信息（Nike运动鞋、899元）和物流详情，并主动询问后续需求，专业且直接解决了用户问题。",
+        "faithfulness": "客服回复中的订单号、状态、时间、商品、金额、承运商、物流单号及预计送达均与工具返回一致，无编造事实。",
+        "process_soundness": "用户只需查询订单状态，直接调用 query_order 精准匹配需求，单次调用无冗余，顺序合理。"
+      },
+      "trace": {
+        "case_id": "order_query_basic",
+        "turns": [
+          "帮我查一下订单 ORD-20240115-001 的状态"
+        ],
+        "route": null,
+        "reply": "已为您查到订单信息，详情如下：\n\n📦 **订单号**：ORD-20240115-001\n**状态**：已发货（运输中）\n**下单时间**：2024-01-15 10:30:00\n**发货时间**：2024-01-16 14:20:00\n\n🛍️ **商品信息**\n- Nike Air Max 270 运动鞋（SHOE-270-BK-42，42码）× 1\n- 订单金额：￥899.00\n\n🚚 **物流信息**\n- 承运商：顺丰速运\n- 物流单号：SF1234567890\n- 预计送达：2024-01-19\n\n您的包裹正在运输途中，预计 1 月 19 日送达。需要我帮您查询具体的物流轨迹吗？如果您有其他需求（如修改收货信息、售后咨询等），也可以随时告诉我～",
+        "intent": "order_query",
+        "requires_human": false,
+        "total_tokens": 6569,
+        "num_llm_calls": 3,
+        "num_tool_calls": 1,
+        "tool_calls": [
+          "query_order"
+        ],
+        "error": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "logistics_track",
+      "description": "根据物流单号查询物流轨迹",
+      "passed": true,
+      "process": {
+        "tool_accuracy": 1.0,
+        "tool_efficiency": 1.0,
+        "token_cost": 5604,
+        "token_pass": true,
+        "process_soundness": 1.0,
+        "route_match": null,
+        "process_score": 1.0
+      },
+      "result": {
+        "intent_match": 1.0,
+        "keyword_coverage": 1.0,
+        "requires_human_match": 1.0,
+        "answer_quality": 1.0,
+        "faithfulness": 1.0,
+        "result_score": 1.0
+      },
+      "judge_reasons": {
+        "answer_quality": "回复准确完整地提供了顺丰单号的最新物流轨迹与派送状态，信息专业清晰，直接解决了用户查询需求。",
+        "faithfulness": "物流单号、承运商、状态及各条轨迹均与工具返回一致，派送提示也基于最新轨迹中的正在派送中。",
+        "process_soundness": "用户仅需查询单个快递单号物流状态，单次调用 query_logistics 精准匹配需求，无冗余或缺失步骤。"
+      },
+      "trace": {
+        "case_id": "logistics_track",
+        "turns": [
+          "帮我查一下顺丰快递 SF1234567890 现在到哪了？"
+        ],
+        "route": null,
+        "reply": "帮您查到啦～ 您的顺丰快递 **SF1234567890** 最新状态是 **运输中**，具体轨迹如下：\n\n| 时间 | 地点 | 状态 |\n|------|------|------|\n| 01-16 14:20 | 深圳南山区 | 快件已揽收 |\n| 01-17 06:00 | 广州转运中心 | 已到达 |\n| 01-17 22:00 | 上海转运中心 | 已到达 |\n| 01-18 08:30 | 上海浦东区 | **正在派送中** 📦 |\n\n目前快件已经到达 **上海浦东区**，正在派送中，建议您保持手机畅通，快递员可能会电话联系您哦～\n\n请问还有其他需要帮忙的吗？😊",
+        "intent": "order_query",
+        "requires_human": false,
+        "total_tokens": 5604,
+        "num_llm_calls": 3,
+        "num_tool_calls": 1,
+        "tool_calls": [
+          "query_logistics"
+        ],
+        "error": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "logistics_no_tracking",
+      "description": "查询未发货订单的物流信息",
+      "passed": false,
+      "process": {
+        "tool_accuracy": null,
+        "tool_efficiency": null,
+        "token_cost": 0,
+        "token_pass": null,
+        "process_soundness": null,
+        "route_match": null,
+        "process_score": null
+      },
+      "result": {
+        "intent_match": null,
+        "keyword_coverage": null,
+        "requires_human_match": null,
+        "answer_quality": null,
+        "faithfulness": null,
+        "result_score": null
+      },
+      "judge_reasons": {},
+      "trace": {
+        "case_id": "logistics_no_tracking",
+        "turns": [
+          "订单 ORD-20240120-002 的快递到哪了？"
+        ],
+        "route": null,
+        "reply": null,
+        "intent": null,
+        "requires_human": null,
+        "total_tokens": 6011,
+        "num_llm_calls": 3,
+        "num_tool_calls": 1,
+        "tool_calls": [
+          "query_order"
+        ],
+        "error": "ValidationError: 3 validation errors for CustomerServiceResponse\nintent\n  Field required [type=missing, input_value={}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nconfidence\n  Field required [type=missing, input_value={}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nreply\n  Field required [type=missing, input_value={}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"
+      },
+      "error": "ValidationError: 3 validation errors for CustomerServiceResponse\nintent\n  Field required [type=missing, input_value={}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nconfidence\n  Field required [type=missing, input_value={}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nreply\n  Field required [type=missing, input_value={}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"
+    },
+    {
+      "case_id": "product_out_of_stock",
+      "description": "咨询库存为零的商品",
+      "passed": false,
+      "process": {
+        "tool_accuracy": 1.0,
+        "tool_efficiency": 0.3333333333333333,
+        "token_cost": 8208,
+        "token_pass": true,
+        "process_soundness": 0.6,
+        "route_match": null,
+        "process_score": 0.6444444444444444
+      },
+      "result": {
+        "intent_match": 1.0,
+        "keyword_coverage": 1.0,
+        "requires_human_match": 1.0,
+        "answer_quality": 1.0,
+        "faithfulness": 1.0,
+        "result_score": 1.0
+      },
+      "judge_reasons": {
+        "answer_quality": "准确查询并明确告知该规格库存为0，附上商品信息与换码、到货提醒、相似款等可行方案，直接且完整地解决了用户关于库存的疑问。",
+        "faithfulness": "客服所述商品名称、价格、规格、描述及库存为0均已找到工具返回依据，与成功查询结果一致。",
+        "process_soundness": "选用 query_product 查询库存方向正确，但连续三次调用同一工具且未见参数差异，存在明显冗余，缺乏对结果的有效利用。"
+      },
+      "trace": {
+        "case_id": "product_out_of_stock",
+        "turns": [
+          "Levi's 501 牛仔裤还有货吗？"
+        ],
+        "route": null,
+        "reply": "我帮您查到了这款商品，不过目前**库存为 0，暂时缺货**了。😥\n\n**商品信息：**\n- 名称：Levi's 501 经典牛仔裤\n- 价格：¥699\n- 规格：原色 / 尺码 30 / 100% 棉\n- 描述：经典直筒版型，原色丹宁面料，纽扣门襟\n- 库存：**暂时缺货**\n\n目前这个规格（原色、30 码）没有现货。您可以参考以下方案：\n1. **换个尺码/颜色**：告诉我您想要的尺码或颜色，我帮您再查查是否有货；\n2. **到货提醒**：您也可以过几天再来看看，或联系人工客服登记到货通知；\n3. **看看相似款**：如果您需要，我可以帮您推荐其他款式的经典牛仔裤。\n\n请问您想怎么处理呢？",
+        "intent": "product_consult",
+        "requires_human": false,
+        "total_tokens": 8208,
+        "num_llm_calls": 4,
+        "num_tool_calls": 3,
+        "tool_calls": [
+          "query_product",
+          "query_product",
+          "query_product"
+        ],
+        "error": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "return_request",
+      "description": "提供订单号和原因后申请退款",
+      "passed": false,
+      "process": {
+        "tool_accuracy": null,
+        "tool_efficiency": null,
+        "token_cost": 6855,
+        "token_pass": true,
+        "process_soundness": 0.8,
+        "route_match": null,
+        "process_score": 0.8
+      },
+      "result": {
+        "intent_match": 0.0,
+        "keyword_coverage": 1.0,
+        "requires_human_match": 1.0,
+        "answer_quality": 1.0,
+        "faithfulness": 1.0,
+        "result_score": 0.8
+      },
+      "judge_reasons": {
+        "answer_quality": "客服准确查询订单并说明该订单已有退款申请正在审核中，避免了重复提交，同时补充时效政策、退货注意事项和运费说明，信息完整专业且直接解决了用户问题。",
+        "faithfulness": "订单号、商品SKU、实付金额、签收时间、退款原因/状态/申请时间均与工具返回一致，时效与运费说明也符合检索到的退换货政策，无虚构信息。",
+        "process_soundness": "先查订单确认信息再检索退款政策，顺序合理无冗余，但缺少后续发起退款或确认用户意图的关键步骤。"
+      },
+      "trace": {
+        "case_id": "return_request",
+        "turns": [
+          "我买的 Levi's 牛仔裤尺码不合适，订单号 ORD-20240118-004，想退款"
+        ],
+        "route": null,
+        "reply": "我帮您查询了订单，这里有个好消息要告诉您～ 😊\n\n**订单详情**\n- 订单号：ORD-20240118-004\n- 商品：Levi's 501 经典牛仔裤（尺码 SKU：CLOTH-LEVI-501-30）× 1\n- 实付金额：¥699.00\n- 签收时间：2024-01-21 15:00\n\n**当前退款状态**\n这笔订单**已经有一笔退款申请在处理中了**：\n- 退款原因：尺码不合适\n- 退款状态：**审核中**\n- 申请时间：2024-01-22 10:00\n\n所以您无需重复提交，目前申请正在审核中。\n\n**关于时效**：根据《退换货政策》，您是在签收后 7 天内申请的「七天无理由退货」，且原因（尺码不合适）符合条件，属于正常受理范围。审核通过后，按提示寄回商品，仓库签收质检通过后款项将原路退回。\n\n**几点温馨提示**：\n1. 请确保商品**吊牌、包装、配件齐全，未洗涤、未使用**，以免影响二次销售导致审核不通过；\n2. 退货运费需由您承担，建议使用平台「上门取件」服务（12 元起，从退款金额中扣除）。\n\n请问还有其他需要我帮您处理的吗？比如想了解物流寄回方式，我可以继续帮您～",
+        "intent": "order_query",
+        "requires_human": false,
+        "total_tokens": 6855,
+        "num_llm_calls": 3,
+        "num_tool_calls": 2,
+        "tool_calls": [
+          "query_order",
+          "rag_search"
+        ],
+        "error": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "knowledge_policy",
+      "description": "通过 RAG 查询七天无理由退货政策",
+      "passed": true,
+      "process": {
+        "tool_accuracy": 1.0,
+        "tool_efficiency": 1.0,
+        "token_cost": 7614,
+        "token_pass": true,
+        "process_soundness": 1.0,
+        "route_match": null,
+        "process_score": 1.0
+      },
+      "result": {
+        "intent_match": 1.0,
+        "keyword_coverage": 1.0,
+        "requires_human_match": null,
+        "answer_quality": 1.0,
+        "faithfulness": 1.0,
+        "result_score": 1.0
+      },
+      "judge_reasons": {
+        "answer_quality": "回复明确肯定平台支持七天无理由退货，并准确说明了7天时限、适用与不适用范围及运费承担规则，信息完整专业，直接解决了用户疑问。",
+        "faithfulness": "客服回复中的七天无理由退货适用范围、不适用商品、运费规则及会员减免信息均可在工具返回的文档中找到对应依据，无捏造或歪曲。",
+        "process_soundness": "用户询问退货政策，属于知识库查询类问题，调用 rag_search 单次检索即可精准获取答案，工具选择正确且无多余调用。"
+      },
+      "trace": {
+        "case_id": "knowledge_policy",
+        "turns": [
+          "你们支持七天无理由退货吗？"
+        ],
+        "route": null,
+        "reply": "您好，很高兴为您解答～根据我们的**《退换货政策》**，平台是支持「七天无理由退货」的，具体情况给您说明一下：\n\n**✅ 支持范围**\n自您**签收商品之日起 7 天内（含第 7 天）**，在不影响商品二次销售的前提下，可以申请七天无理由退货。\n「不影响二次销售」指：商品本体、吊牌、包装、配件、赠品齐全，且未洗涤、未使用、未损坏。\n\n**❌ 以下商品不支持**\n- **个人定制类**：刻字、刻名、定制尺寸的鞋服等\n- **鲜活易腐类**：水果、海鲜、生鲜冷链等\n- **数字化商品**：已激活的软件序列号、电子卡券、电子书\n- **拆封后影响安全健康的**：化妆品、内衣、贴身衣物（已拆封）\n\n**🚚 运费说明**\n七天无理由退货的**退货运费由顾客承担**，建议使用平台合作的「上门取件」服务（顺丰/圆通/京东物流），运费 12 元起，从退款金额中扣除。\n> 💡 小提示：如果您是**白银及以上会员**，还能享受上门取件费减免 50%～免费哦～\n\n请问您是想为某件具体商品办理退货吗？如果是的话，可以把**订单号或商品名称**告诉我，我帮您看看是否在退货范围内～",
+        "intent": "return_request",
+        "requires_human": false,
+        "total_tokens": 7614,
+        "num_llm_calls": 3,
+        "num_tool_calls": 1,
+        "tool_calls": [
+          "rag_search"
+        ],
+        "error": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "member_benefits",
+      "description": "通过 RAG 查询会员权益",
+      "passed": false,
+      "process": {
+        "tool_accuracy": 1.0,
+        "tool_efficiency": 1.0,
+        "token_cost": 6877,
+        "token_pass": true,
+        "process_soundness": 1.0,
+        "route_match": null,
+        "process_score": 1.0
+      },
+      "result": {
+        "intent_match": 1.0,
+        "keyword_coverage": 1.0,
+        "requires_human_match": 1.0,
+        "answer_quality": 0.0,
+        "faithfulness": 0.0,
+        "result_score": 0.6
+      },
+      "judge_reasons": {
+        "answer_quality": "质量评分失败: JSONDecodeError: Expecting ',' delimiter: line 1 column 32 (char 31)",
+        "faithfulness": "客服称黄金会员为“标准发货”，但工具返回中并无黄金会员发货速度的相关信息，该物流事实无依据。",
+        "process_soundness": "该问题是知识库检索类问答，调用 rag_search 一次即可获取会员权益及黄金/钻石会员差异，工具选择精准、顺序合理、无冗余调用。"
+      },
+      "trace": {
+        "case_id": "member_benefits",
+        "turns": [
+          "充值会员有什么好处？重点介绍黄金会员和钻石会员的区别。"
+        ],
+        "route": null,
+        "reply": "您好～关于会员权益，小夕已经帮您查到了详细说明。先跟您说明一个重点：**并夕夕的会员体系是完全免费的，不需要充值或缴纳年费**，等级是按您的消费金额自动升降的哦。\n\n## 会员等级怎么来的？\n等级根据您**近 12 个月的累计实付金额**自动结算（每月 1 号更新）：\n\n| 等级 | 升级门槛 | 维持门槛 |\n|------|---------|---------|\n| 注册会员 | 完成手机注册 | — |\n| 白银会员 | 累计 1,000 元 | 800 元/年 |\n| 黄金会员 | 累计 5,000 元 | 4,000 元/年 |\n| 钻石会员 | 累计 20,000 元 | 15,000 元/年 |\n\n> 温馨提示：退款成功后，对应金额会从累计消费中扣除。\n\n## 黄金会员 vs 钻石会员 核心区别 ✨\n\n| 权益项 | 黄金会员 | 钻石会员 |\n|--------|---------|---------|\n| **优惠券** | 每月 满199-30 ×1、满99-10 ×1 | 每月 满499-80 ×1、满199-30 ×1、满99-10 ×1 |\n| **包邮范围** | 全场免邮（**不含**偏远地区） | 全场包邮（**含偏远地区**）|\n| **退换货** | 上门取件免费 | 上门取件免费 + 一年 **4 次「无忧退」**（无需理由直接退款，运费全免）|\n| **发货速度** | 标准发货 | **优先发货（24 小时内出库）** |\n| **客服服务** | 专属客服直通通道 | **专属 1V1 客服经理** |\n| **生日特权** | 生日当天 88 元无门槛券、当月双倍积分 | 额外享生日当周专属生日礼盒、当天 88 元券、双倍积分 |\n\n**简单总结：**\n- **黄金会员**适合看重「免邮 + 免费上门取件 + 专属客服通道」的用户；\n- **钻石会员**在黄金基础上，多了 **偏远地区包邮、优先发货、1年4次无忧退、1V1客服经理** 这几项高价值权益，更适合高频、高客单的购物用户。\n\n如果您想了解自己当前的会员等级或积分情况，可以告诉我，我帮您确认～ 还有其他想了解的吗？",
+        "intent": "account",
+        "requires_human": false,
+        "total_tokens": 6877,
+        "num_llm_calls": 3,
+        "num_tool_calls": 1,
+        "tool_calls": [
+          "rag_search"
+        ],
+        "error": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "complaint_to_human",
+      "description": "强烈投诉，应识别为投诉并倾向转人工",
+      "passed": false,
+      "process": {
+        "tool_accuracy": null,
+        "tool_efficiency": null,
+        "token_cost": 2898,
+        "token_pass": true,
+        "process_soundness": 0.4,
+        "route_match": null,
+        "process_score": 0.4
+      },
+      "result": {
+        "intent_match": 1.0,
+        "keyword_coverage": null,
+        "requires_human_match": 0.0,
+        "answer_quality": 1.0,
+        "faithfulness": 1.0,
+        "result_score": 0.75
+      },
+      "judge_reasons": {
+        "answer_quality": "客服先安抚情绪，再明确引导提供订单信息并承诺核实处理及退换货方案，专业完整，有效推进问题解决。",
+        "faithfulness": "客服回复仅作安抚并索要订单信息，未陈述任何具体订单、价格、库存或物流事实，属不涉及具体事实的一般性说明。",
+        "process_soundness": "用户明确投诉质量问题并威胁去消协，未调用任何工具进行投诉登记、订单核实或售后处理，缺少关键调用。"
+      },
+      "trace": {
+        "case_id": "complaint_to_human",
+        "turns": [
+          "你们这什么破服务！东西质量太差了，我要投诉！必须给我个说法，不然就去消协告你们！"
+        ],
+        "route": null,
+        "reply": "您好，非常抱歉给您带来了这么糟糕的购物体验，我完全理解您现在的心情，买到质量有问题的商品确实让人很生气。请先别着急，我是并夕夕客服小夕，一定会尽力帮您处理好这件事🙏\n\n为了尽快帮您解决问题，麻烦您提供以下信息中的任意一项：\n\n1. **订单号**（最快，可以直接帮您查订单和商品情况）\n2. 或者您的**用户名/手机号**，我帮您把订单调出来确认\n\n另外也方便告诉我一下：**具体是哪件商品、出现了什么问题**（比如破损、功能故障、与描述不符等）？\n\n拿到信息后，我会帮您核实情况，并给您提供几种解决方案（比如退换货、退款、补发等）供您选择。如果确实是商品质量问题，责任在我们这边，该退该换一定给您办妥，您放心～",
+        "intent": "complaint",
+        "requires_human": false,
+        "total_tokens": 2898,
+        "num_llm_calls": 2,
+        "num_tool_calls": 0,
+        "tool_calls": [],
+        "error": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "greeting_no_tool",
+      "description": "纯问候，不应调用工具",
+      "passed": true,
+      "process": {
+        "tool_accuracy": null,
+        "tool_efficiency": 1.0,
+        "token_cost": 2590,
+        "token_pass": true,
+        "process_soundness": 1.0,
+        "route_match": null,
+        "process_score": 1.0
+      },
+      "result": {
+        "intent_match": 1.0,
+        "keyword_coverage": null,
+        "requires_human_match": 1.0,
+        "answer_quality": 1.0,
+        "faithfulness": 1.0,
+        "result_score": 1.0
+      },
+      "judge_reasons": {
+        "answer_quality": "客服友好回应问候，并清晰介绍可提供的服务范围，引导用户提出具体问题，回复准确、完整且专业。",
+        "faithfulness": "回复为问候与能力介绍，未涉及具体订单、价格等事实信息，无需工具依据，属于一般性说明。",
+        "process_soundness": "用户仅打招呼，无需调用任何工具，未调用工具是正确且无冗余的选择。"
+      },
+      "trace": {
+        "case_id": "greeting_no_tool",
+        "turns": [
+          "你好呀"
+        ],
+        "route": null,
+        "reply": "你好呀～我是并夕夕的智能客服小夕，很高兴为你服务！😊\n\n我可以帮你处理这些事：\n- 📦 **订单查询**：订单状态、物流进度、发货时间\n- 🔄 **退换货咨询**：政策了解、流程指导\n- 🛍️ **商品咨询**：价格、规格、库存\n- 🛠️ **售后服务**：质量问题、维修咨询\n- 🎁 **优惠活动**：促销、优惠券规则\n- 👤 **账户问题**：基础账户帮助\n\n请问今天有什么可以帮到你呢？如果有具体的订单号或商品名称，也可以直接告诉我，我帮你查～",
+        "intent": "greeting",
+        "requires_human": false,
+        "total_tokens": 2590,
+        "num_llm_calls": 2,
+        "num_tool_calls": 0,
+        "tool_calls": [],
+        "error": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "multi_turn_followup",
+      "description": "多轮对话中补充订单号",
+      "passed": true,
+      "process": {
+        "tool_accuracy": 1.0,
+        "tool_efficiency": 1.0,
+        "token_cost": 8905,
+        "token_pass": true,
+        "process_soundness": 1.0,
+        "route_match": null,
+        "process_score": 1.0
+      },
+      "result": {
+        "intent_match": 1.0,
+        "keyword_coverage": 1.0,
+        "requires_human_match": 1.0,
+        "answer_quality": 1.0,
+        "faithfulness": 1.0,
+        "result_score": 1.0
+      },
+      "judge_reasons": {
+        "answer_quality": "客服根据订单号准确完整地列出了订单详情，商品为小米14 Ultra，与参考要点一致，信息专业且主动提供后续服务引导，直接满足用户查询需求。",
+        "faithfulness": "回复中的订单号、收货人、状态、商品、金额、时间、物流等所有信息均与工具返回完全一致。",
+        "process_soundness": "用户仅提供订单号，调用 query_order 查询订单信息，工具选择精准且无多余调用。"
+      },
+      "trace": {
+        "case_id": "multi_turn_followup",
+        "turns": [
+          "我想查一下我的订单",
+          "订单号是 ORD-20240110-003"
+        ],
+        "route": null,
+        "reply": "已经帮您查到啦，订单详情如下 👇\n\n| 项目 | 信息 |\n|------|------|\n| 订单号 | ORD-20240110-003 |\n| 收货人 | 大壮 |\n| 订单状态 | ✅ 已签收 |\n| 商品 | 小米14 Ultra 手机（PHONE-MI14U-BK）× 1 |\n| 订单金额 | ¥5999.00 |\n| 下单时间 | 2024-01-10 16:00 |\n| 发货时间 | 2024-01-11 08:00 |\n| 物流公司 | 京东物流 |\n| 物流单号 | JD9876543210 |\n| 预计送达 | 2024-01-13 |\n| 实际签收 | 2024-01-13 11:30 |\n\n您的订单已于 **1月13日 11:30 签收完成**，目前是「已签收」状态哦～\n\n请问您还需要我帮您做什么呢？比如：\n- 📦 查询这单的**物流详细轨迹**\n- 🔄 咨询**退换货**相关事宜\n- 💬 其他售后问题\n\n随时告诉我～",
+        "intent": "order_query",
+        "requires_human": false,
+        "total_tokens": 8905,
+        "num_llm_calls": 5,
+        "num_tool_calls": 1,
+        "tool_calls": [
+          "query_order"
+        ],
+        "error": null
+      },
+      "error": null
+    },
+    {
+      "case_id": "list_orders",
+      "description": "提供用户身份后查询其订单列表",
+      "passed": true,
+      "process": {
+        "tool_accuracy": 1.0,
+        "tool_efficiency": 1.0,
+        "token_cost": 6786,
+        "token_pass": true,
+        "process_soundness": 1.0,
+        "route_match": null,
+        "process_score": 1.0
+      },
+      "result": {
+        "intent_match": 1.0,
+        "keyword_coverage": 1.0,
+        "requires_human_match": 1.0,
+        "answer_quality": 1.0,
+        "faithfulness": 1.0,
+        "result_score": 1.0
+      },
+      "judge_reasons": {
+        "answer_quality": "回复准确完整地列出了用户的订单信息（含参考要点Nike），并主动提供后续帮助，直接解决了用户问题。",
+        "faithfulness": "订单号、时间、商品名称/数量/金额和状态均与工具返回一致，颜色尺码可由SKU合理推断。",
+        "process_soundness": "用户查询自己的订单，直接调用 list_user_orders 工具选择精准、无多余调用，能直接满足需求。"
+      },
+      "trace": {
+        "case_id": "list_orders",
+        "turns": [
+          "我是小明，我都买过哪些东西？帮我看下我的订单。"
+        ],
+        "route": null,
+        "reply": "小明您好，我帮您查到啦，您目前有 **1 笔订单**，详情如下：\n\n| 订单号 | 下单时间 | 商品 | 数量 | 金额 | 状态 |\n|---|---|---|---|---|---|\n| ORD-20240115-001 | 2024-01-15 10:30 | Nike Air Max 270 运动鞋（黑色 / 42码） | 1 | ¥899.00 | 已发货 🚚 |\n\n这笔订单目前状态是「**已发货**」，应该正在路上～\n\n需要我帮您做什么呢？比如：\n1. 📦 查询这笔订单的**物流进度**\n2. 🔙 申请**退换货**\n3. 其他任何问题\n\n您告诉我一声就行！",
+        "intent": "order_query",
+        "requires_human": false,
+        "total_tokens": 6786,
+        "num_llm_calls": 3,
+        "num_tool_calls": 1,
+        "tool_calls": [
+          "list_user_orders"
+        ],
+        "error": null
+      },
+      "error": null
+    }
+  ]
+}
