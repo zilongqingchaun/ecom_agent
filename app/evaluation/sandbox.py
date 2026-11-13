@@ -1,5 +1,3 @@
-"""隔离运行评估用例，并采集模型与工具调用轨迹。"""
-#_instrument里面调用_wrap_create和_wrap_call_tool，在原本调用api的基础上包了一层记录
 from __future__ import annotations
 
 import json

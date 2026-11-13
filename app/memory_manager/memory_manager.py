@@ -1,7 +1,7 @@
 ﻿from pathlib import Path
 
 from app.memory_manager.long_term_memory import LongTermMemory
-from app.memory_manager.shrot_term_memroy import ShortTermMemory
+from app.memory_manager.short_term_memory import ShortTermMemory
 
 
 class MemoryManager:

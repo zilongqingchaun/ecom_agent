@@ -1,10 +1,3 @@
-"""运行当前项目的单 Agent 评估。
-
-示例：
-    python -m app.evaluation.run_eval --no-judge
-    python -m app.evaluation.run_eval --output evaluation_report.json
-"""
-
 from __future__ import annotations
 
 import argparse

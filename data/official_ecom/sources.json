@@ -1,0 +1,122 @@
+[
+  {
+    "doc_id": "pdd_protection",
+    "platform": "pdd",
+    "title": "拼多多消费者保障计划摘要",
+    "source_url": "https://www.yangkeduo.com/home/customer",
+    "effective_date": "2026-01-18",
+    "access": "search_index_full_text_direct_fetch_timeout",
+    "checked_at": "2026-10-29",
+    "chunk_count": 4
+  },
+  {
+    "doc_id": "pdd_privacy",
+    "platform": "pdd",
+    "title": "拼多多隐私政策账户权利摘要",
+    "source_url": "https://www.yangkeduo.com/pdd_privacy_policy.pdf",
+    "effective_date": null,
+    "access": "search_index_excerpt_sections_6_5_to_6_7",
+    "checked_at": "2026-10-29",
+    "chunk_count": 3
+  },
+  {
+    "doc_id": "pdd_help",
+    "platform": "pdd",
+    "title": "拼多多官方帮助导航摘要",
+    "source_url": "https://www.yangkeduo.com/home/help/",
+    "effective_date": null,
+    "access": "search_index_navigation_only_direct_fetch_timeout",
+    "checked_at": "2026-10-29",
+    "chunk_count": 2
+  },
+  {
+    "doc_id": "jd_shipping",
+    "platform": "jd",
+    "title": "京东自营售后运费摘要",
+    "source_url": "https://help.jd.com/user/issue/131-496.html",
+    "effective_date": null,
+    "access": "official_search_text_and_page",
+    "checked_at": "2026-10-29",
+    "chunk_count": 4
+  },
+  {
+    "doc_id": "jd_returns",
+    "platform": "jd",
+    "title": "京东自营售后服务总则摘要",
+    "source_url": "https://help.jd.com/user/issue/327-988.html",
+    "effective_date": null,
+    "access": "official_search_text_and_page",
+    "checked_at": "2026-10-29",
+    "chunk_count": 3
+  },
+  {
+    "doc_id": "jd_price",
+    "platform": "jd",
+    "title": "京东价格保护摘要",
+    "source_url": "https://help.jd.com/user/issue/291-4537.html",
+    "effective_date": null,
+    "access": "official_search_text_and_page",
+    "checked_at": "2026-10-29",
+    "chunk_count": 4
+  },
+  {
+    "doc_id": "jd_coupon",
+    "platform": "jd",
+    "title": "京东优惠券规则摘要",
+    "source_url": "https://help.jd.com/user/issue/169-1077.html",
+    "effective_date": null,
+    "access": "official_page_body",
+    "checked_at": "2026-10-29",
+    "chunk_count": 4
+  },
+  {
+    "doc_id": "jd_ecard",
+    "platform": "jd",
+    "title": "京东E卡使用规则摘要",
+    "source_url": "https://help.jd.com/user/issue/288-493.html",
+    "effective_date": null,
+    "access": "official_search_text",
+    "checked_at": "2026-10-29",
+    "chunk_count": 5
+  },
+  {
+    "doc_id": "jd_invoice",
+    "platform": "jd",
+    "title": "京东发票获取摘要",
+    "source_url": "https://help.jd.com/user/issue/502-247.html",
+    "effective_date": null,
+    "access": "official_search_text",
+    "checked_at": "2026-10-29",
+    "chunk_count": 4
+  },
+  {
+    "doc_id": "jd_delivery",
+    "platform": "jd",
+    "title": "京东发货与签收规范摘要",
+    "source_url": "https://help.jd.com/help/viewQuestion-976-2515.html",
+    "effective_date": null,
+    "access": "official_search_text",
+    "checked_at": "2026-10-29",
+    "chunk_count": 5
+  },
+  {
+    "doc_id": "jd_exchange90",
+    "platform": "jd",
+    "title": "京东90天只换不修摘要",
+    "source_url": "https://help.jd.com/user/issue/321-4543.html",
+    "effective_date": null,
+    "access": "official_search_excerpt_direct_page_missing_body",
+    "checked_at": "2026-10-29",
+    "chunk_count": 3
+  },
+  {
+    "doc_id": "jd_freight_insurance",
+    "platform": "jd",
+    "title": "京东运费险厂商寄回场景摘要",
+    "source_url": "https://help.jd.com/user/issue/321-4436.html",
+    "effective_date": null,
+    "access": "official_search_excerpt_direct_page_missing_body",
+    "checked_at": "2026-10-29",
+    "chunk_count": 2
+  }
+]

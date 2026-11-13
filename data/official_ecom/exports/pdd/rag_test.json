@@ -1,0 +1,132 @@
+[
+  {
+    "id": "pdd_protection.authenticity.q1",
+    "query": "拼多多所有假货都能按假一赔十处理吗？",
+    "relevant_chunk_ids": [
+      "pdd_protection.authenticity"
+    ],
+    "reference_answer": "拼多多消费者购买到假冒品牌商品，且商品页面带假一赔十标识，可向商家主张该项保障。不能把这一标识权益扩大到所有商品。"
+  },
+  {
+    "id": "pdd_protection.authenticity.q2",
+    "query": "拼多多买到冒牌货，页面写了假一赔十，找谁主张？",
+    "relevant_chunk_ids": [
+      "pdd_protection.authenticity"
+    ],
+    "reference_answer": "拼多多消费者购买到假冒品牌商品，且商品页面带假一赔十标识，可向商家主张该项保障。不能把这一标识权益扩大到所有商品。"
+  },
+  {
+    "id": "pdd_protection.quality_shipping.q1",
+    "query": "拼多多商品有质量问题，退货运费谁承担，需要凭证吗？",
+    "relevant_chunk_ids": [
+      "pdd_protection.quality_shipping"
+    ],
+    "reference_answer": "拼多多因质量问题退换货，需在退货申请页面上传问题凭证；经平台审核通过，由商家承担全部运费。"
+  },
+  {
+    "id": "pdd_protection.quality_shipping.q2",
+    "query": "拼多多东西坏了，上传照片通过审核后还要我出寄回的钱吗？",
+    "relevant_chunk_ids": [
+      "pdd_protection.quality_shipping"
+    ],
+    "reference_answer": "拼多多因质量问题退换货，需在退货申请页面上传问题凭证；经平台审核通过，由商家承担全部运费。"
+  },
+  {
+    "id": "pdd_protection.intervention.q1",
+    "query": "拼多多商家拒绝售后，协商不成可以怎么办？",
+    "relevant_chunk_ids": [
+      "pdd_protection.intervention"
+    ],
+    "reference_answer": "拼多多商家拒绝履行保障义务、拒绝赔付或双方无法达成一致时，消费者可以申请平台介入。七天无理由退换货仍有法律规定的例外。"
+  },
+  {
+    "id": "pdd_protection.intervention.q2",
+    "query": "拼多多店家不给处理，能让平台介入吗？",
+    "relevant_chunk_ids": [
+      "pdd_protection.intervention"
+    ],
+    "reference_answer": "拼多多商家拒绝履行保障义务、拒绝赔付或双方无法达成一致时，消费者可以申请平台介入。七天无理由退换货仍有法律规定的例外。"
+  },
+  {
+    "id": "pdd_protection.deadline.q1",
+    "query": "拼多多自动确认收货后，主动申请平台售后的期限怎么算？",
+    "relevant_chunk_ids": [
+      "pdd_protection.deadline"
+    ],
+    "reference_answer": "该消保计划规定，主动向拼多多申请投诉、维权或售后，应在下单或拼单成功后至确认收货后15天内提出；确认收货包含手动和自动确认。逾期平台有权不受理。"
+  },
+  {
+    "id": "pdd_protection.deadline.q2",
+    "query": "拼多多不是我点的收货，是系统确认的，15天期限也适用吗？",
+    "relevant_chunk_ids": [
+      "pdd_protection.deadline"
+    ],
+    "reference_answer": "该消保计划规定，主动向拼多多申请投诉、维权或售后，应在下单或拼单成功后至确认收货后15天内提出；确认收货包含手动和自动确认。逾期平台有权不受理。"
+  },
+  {
+    "id": "pdd_privacy.entry.q1",
+    "query": "拼多多账号注销入口在哪？",
+    "relevant_chunk_ids": [
+      "pdd_privacy.entry"
+    ],
+    "reference_answer": "拼多多用户可在客户端个人中心的设置中进入账号与安全、账号注销，查看条件；也可联系官方客服输入注销了解办理方式。"
+  },
+  {
+    "id": "pdd_privacy.entry.q2",
+    "query": "拼多多不想用了，找不到销号位置，能找客服吗？",
+    "relevant_chunk_ids": [
+      "pdd_privacy.entry"
+    ],
+    "reference_answer": "拼多多用户可在客户端个人中心的设置中进入账号与安全、账号注销，查看条件；也可联系官方客服输入注销了解办理方式。"
+  },
+  {
+    "id": "pdd_privacy.data.q1",
+    "query": "拼多多注销审核通过后，个人信息怎么处理？",
+    "relevant_chunk_ids": [
+      "pdd_privacy.data"
+    ],
+    "reference_answer": "拼多多账户注销申请经审核通过后，个人信息将被删除或匿名化，法律法规另有规定的情形除外。不能据此承诺所有记录立即删除。"
+  },
+  {
+    "id": "pdd_privacy.data.q2",
+    "query": "拼多多销号以后，能保证所有记录马上消失吗？",
+    "relevant_chunk_ids": [
+      "pdd_privacy.data"
+    ],
+    "reference_answer": "拼多多账户注销申请经审核通过后，个人信息将被删除或匿名化，法律法规另有规定的情形除外。不能据此承诺所有记录立即删除。"
+  },
+  {
+    "id": "pdd_privacy.response.q1",
+    "query": "拼多多处理个人信息请求，核验身份后多久答复？",
+    "relevant_chunk_ids": [
+      "pdd_privacy.response"
+    ],
+    "reference_answer": "针对个人信息权利请求，拼多多可能先核验身份；身份验证无误后十五日内答复。该期限是请求答复期限，不是退款到账或注销完成承诺。"
+  },
+  {
+    "id": "pdd_privacy.response.q2",
+    "query": "拼多多隐私请求说十五日答复，是保证十五日退款吗？",
+    "relevant_chunk_ids": [
+      "pdd_privacy.response"
+    ],
+    "reference_answer": "针对个人信息权利请求，拼多多可能先核验身份；身份验证无误后十五日内答复。该期限是请求答复期限，不是退款到账或注销完成承诺。"
+  },
+  {
+    "id": "pdd_cross_01",
+    "query": "拼多多商品质量有问题，商家不肯承担退货运费，该怎么处理？",
+    "relevant_chunk_ids": [
+      "pdd_protection.quality_shipping",
+      "pdd_protection.intervention"
+    ],
+    "reference_answer": "上传质量问题凭证，审核通过后由商家承担全部运费；商家拒绝履行义务且协商不成，可以申请平台介入。"
+  },
+  {
+    "id": "pdd_cross_02",
+    "query": "拼多多我想注销账号，从哪进入？通过后是不是所有信息都立即删光？",
+    "relevant_chunk_ids": [
+      "pdd_privacy.entry",
+      "pdd_privacy.data"
+    ],
+    "reference_answer": "从个人中心、设置、账号与安全、账号注销查看，或联系官方客服。审核通过后删除或匿名化，存在法律法规例外，不能保证所有记录立即删除。"
+  }
+]

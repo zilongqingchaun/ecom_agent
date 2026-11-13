@@ -1,0 +1,34 @@
+[
+  {
+    "id": "pdd_help.topics.q1",
+    "query": "拼多多优惠券用不了，官方帮助中心有对应入口吗？",
+    "relevant_chunk_ids": [
+      "pdd_help.topics"
+    ],
+    "reference_answer": "拼多多官方帮助中心提供交易、退款售后、账户安全等问题入口，包括发货、未发货退款、优惠券无法使用及退换货。这里只核验了导航，不能由栏目名称推断详细办理条件。"
+  },
+  {
+    "id": "pdd_help.topics.q2",
+    "query": "拼多多帮助中心有未发货退款和账户安全栏目吗？",
+    "relevant_chunk_ids": [
+      "pdd_help.topics"
+    ],
+    "reference_answer": "拼多多官方帮助中心提供交易、退款售后、账户安全等问题入口，包括发货、未发货退款、优惠券无法使用及退换货。这里只核验了导航，不能由栏目名称推断详细办理条件。"
+  },
+  {
+    "id": "pdd_help.hours.q1",
+    "query": "拼多多消费者客服几点提供服务？",
+    "relevant_chunk_ids": [
+      "pdd_help.hours"
+    ],
+    "reference_answer": "本次检索到的拼多多官方帮助中心标示消费者客服服务时间为8:00至23:00；该时间不是处理完成时限，实际入口展示变化时应重新核验。"
+  },
+  {
+    "id": "pdd_help.hours.q2",
+    "query": "拼多多客服时间写到23点，是说我的售后23点前必定处理完吗？",
+    "relevant_chunk_ids": [
+      "pdd_help.hours"
+    ],
+    "reference_answer": "本次检索到的拼多多官方帮助中心标示消费者客服服务时间为8:00至23:00；该时间不是处理完成时限，实际入口展示变化时应重新核验。"
+  }
+]

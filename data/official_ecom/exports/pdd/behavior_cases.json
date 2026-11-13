@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pdd_negative_01",
+    "platform": "pdd",
+    "query": "拼多多钻石会员要消费满两万元才能升级吗？",
+    "relevant_chunk_ids": [],
+    "reference_answer": "本知识包没有拼多多钻石会员升级规则，不能套用并夕夕模拟会员政策。请以平台展示或官方客服核实为准。",
+    "type": "unanswerable",
+    "split": "test",
+    "family_id": "pdd_negative_01"
+  },
+  {
+    "id": "pdd_negative_02",
+    "platform": "pdd",
+    "query": "拼多多我的订单PDD123退款什么时候到账？",
+    "relevant_chunk_ids": [],
+    "reference_answer": "知识库不能查询具体订单状态或到账时间，需要订单查询工具或官方客服核实。",
+    "type": "requires_tool",
+    "split": "test",
+    "family_id": "pdd_negative_02"
+  },
+  {
+    "id": "pdd_negative_03",
+    "platform": "pdd",
+    "query": "拼多多注销以后30天内可以恢复吗？",
+    "relevant_chunk_ids": [],
+    "reference_answer": "本知识包没有注销恢复期限，不能承诺30天内可恢复；应向官方客服核实。",
+    "type": "unanswerable",
+    "split": "test",
+    "family_id": "pdd_negative_03"
+  },
+  {
+    "id": "pdd_negative_04",
+    "platform": "pdd",
+    "query": "拼多多优惠券为什么用不了，给我这个活动的具体门槛。",
+    "relevant_chunk_ids": [],
+    "reference_answer": "这里只收录帮助导航，没有该券或活动的门槛；需要券详情和活动规则，不能编造。",
+    "type": "clarification",
+    "split": "test",
+    "family_id": "pdd_negative_04"
+  }
+]

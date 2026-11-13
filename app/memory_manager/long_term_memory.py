@@ -40,7 +40,6 @@ class LongTermMemory:
             if self.long_term_memory else "（暂无）"
         )
 
-        # 拷贝一份，别污染调用方
         messages = [
             {
                 "role": "system",
@@ -52,15 +51,15 @@ class LongTermMemory:
         response = self.client.chat.completions.create(
             model=settings.model_name,
             messages=messages,
-            temperature=settings.memory_temperature,                              # 抽取任务用 0
-            response_format={"type": "json_object"},    # 强制 JSON
+            temperature=settings.memory_temperature,                              
+            response_format={"type": "json_object"},    
         )
 
         raw = response.choices[0].message.content or "{}"
         try:
             data = json.loads(raw)
         except json.JSONDecodeError:
-            return ""   # demo 阶段先忽略
+            return ""   
 
         new_facts = data.get("facts", [])
         if new_facts:

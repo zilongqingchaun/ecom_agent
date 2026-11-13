@@ -1,0 +1,139 @@
+[
+  {
+    "id": "jd_coupon.scope.q1",
+    "query": "京东商品券能抵运费或换现金吗？",
+    "relevant_chunk_ids": [
+      "jd_coupon.scope"
+    ],
+    "reference_answer": "京东商品优惠券抵商品款，不能抵运费或兑现；运费券抵京东自营商品订单运费。换购品以换购价购买时不能使用东券。"
+  },
+  {
+    "id": "jd_coupon.scope.q2",
+    "query": "京东运费券能当商品券用吗？",
+    "relevant_chunk_ids": [
+      "jd_coupon.scope"
+    ],
+    "reference_answer": "京东商品优惠券抵商品款，不能抵运费或兑现；运费券抵京东自营商品订单运费。换购品以换购价购买时不能使用东券。"
+  },
+  {
+    "id": "jd_coupon.cancel.q1",
+    "query": "京东用了东券的订单拆开了，只取消一个子单会返券吗？",
+    "relevant_chunk_ids": [
+      "jd_coupon.cancel"
+    ],
+    "reference_answer": "使用全品类、限品类或店铺东券的京东订单，未拆分时取消订单后自动返券；已经拆分时，需要取消全部子单才返券。"
+  },
+  {
+    "id": "jd_coupon.cancel.q2",
+    "query": "京东未拆分订单取消成功，原先用掉的东券怎么办？",
+    "relevant_chunk_ids": [
+      "jd_coupon.cancel"
+    ],
+    "reference_answer": "使用全品类、限品类或店铺东券的京东订单，未拆分时取消订单后自动返券；已经拆分时，需要取消全部子单才返券。"
+  },
+  {
+    "id": "jd_coupon.return.q1",
+    "query": "京东东券订单退货，要退完哪些商品才返券？",
+    "relevant_chunk_ids": [
+      "jd_coupon.return"
+    ],
+    "reference_answer": "京东使用全品类、限品类或店铺东券后，需使用该券的商品全部售后退货，系统才返还东券。"
+  },
+  {
+    "id": "jd_coupon.return.q2",
+    "query": "京东一张东券买了几件，只退一件就能拿回整张券吗？",
+    "relevant_chunk_ids": [
+      "jd_coupon.return"
+    ],
+    "reference_answer": "京东使用全品类、限品类或店铺东券后，需使用该券的商品全部售后退货，系统才返还东券。"
+  },
+  {
+    "id": "jd_coupon.freight.q1",
+    "query": "京东售前取消订单和售后退货，运费券返还一样吗？",
+    "relevant_chunk_ids": [
+      "jd_coupon.freight"
+    ],
+    "reference_answer": "京东运费券在正常取消未拆分订单后返还；拆分订单须全部子单取消。因京东原因全部子单拒收可返还，但退货不返还运费券。"
+  },
+  {
+    "id": "jd_coupon.freight.q2",
+    "query": "京东因为自身原因导致全部子单拒收，运费券能返吗？",
+    "relevant_chunk_ids": [
+      "jd_coupon.freight"
+    ],
+    "reference_answer": "京东运费券在正常取消未拆分订单后返还；拆分订单须全部子单取消。因京东原因全部子单拒收可返还，但退货不返还运费券。"
+  },
+  {
+    "id": "jd_invoice.merchant.q1",
+    "query": "京东第三方店铺的发票找谁开？",
+    "relevant_chunk_ids": [
+      "jd_invoice.merchant"
+    ],
+    "reference_answer": "京东自营商品开正规发票，图书可选择是否开票；发票金额含配送费，另有说明除外。第三方商品的开票和邮寄需联系商家。"
+  },
+  {
+    "id": "jd_invoice.merchant.q2",
+    "query": "京东自营图书必须开发票吗，配送费通常计入吗？",
+    "relevant_chunk_ids": [
+      "jd_invoice.merchant"
+    ],
+    "reference_answer": "京东自营商品开正规发票，图书可选择是否开票；发票金额含配送费，另有说明除外。第三方商品的开票和邮寄需联系商家。"
+  },
+  {
+    "id": "jd_invoice.download.q1",
+    "query": "京东普通电子发票在哪里下载？",
+    "relevant_chunk_ids": [
+      "jd_invoice.download"
+    ],
+    "reference_answer": "京东下单选择普通电子发票，订单完成后系统开具，可在我的订单、订单详情、发票信息下载。"
+  },
+  {
+    "id": "jd_invoice.download.q2",
+    "query": "京东下单选了电子票，是订单完成后才开吗？",
+    "relevant_chunk_ids": [
+      "jd_invoice.download"
+    ],
+    "reference_answer": "京东下单选择普通电子发票，订单完成后系统开具，可在我的订单、订单详情、发票信息下载。"
+  },
+  {
+    "id": "jd_invoice.paper.q1",
+    "query": "京东个人电子发票能改成个人普通纸质票吗？",
+    "relevant_chunk_ids": [
+      "jd_invoice.paper"
+    ],
+    "reference_answer": "京东个人用户选择电子发票后，不能换取个人抬头的普通纸质发票。"
+  },
+  {
+    "id": "jd_invoice.paper.q2",
+    "query": "我在京东选了个人电子票，现在想要纸质的可以吗？",
+    "relevant_chunk_ids": [
+      "jd_invoice.paper"
+    ],
+    "reference_answer": "京东个人用户选择电子发票后，不能换取个人抬头的普通纸质发票。"
+  },
+  {
+    "id": "jd_invoice.qualification.q1",
+    "query": "京东可以同时维护多套有效增票资质吗？",
+    "relevant_chunk_ids": [
+      "jd_invoice.qualification"
+    ],
+    "reference_answer": "京东增值税专用发票资质可在我的京东、账户设置、增票资质中维护；有效资质只支持一个，审核通过三十天后才可删除并重新上传。"
+  },
+  {
+    "id": "jd_invoice.qualification.q2",
+    "query": "京东增票资质刚审核通过，马上删掉重传可以吗？",
+    "relevant_chunk_ids": [
+      "jd_invoice.qualification"
+    ],
+    "reference_answer": "京东增值税专用发票资质可在我的京东、账户设置、增票资质中维护；有效资质只支持一个，审核通过三十天后才可删除并重新上传。"
+  },
+  {
+    "id": "jd_cross_03",
+    "query": "京东订单用了东券和运费券，全部售后退货后两种券都会返吗？",
+    "relevant_chunk_ids": [
+      "jd_coupon.return",
+      "jd_coupon.freight"
+    ],
+    "reference_answer": "使用该东券的商品全部售后退货，系统返还东券；退货不返还运费券，不能将两类券混同。"
+  }
+]

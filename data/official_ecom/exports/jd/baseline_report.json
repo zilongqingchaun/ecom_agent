@@ -1,0 +1,5640 @@
+{
+  "platform": "jd",
+  "collection": "official_jd_1aa796fdaae5",
+  "chunk_count": 34,
+  "model": "deepseek-v4-flash",
+  "results": [
+    {
+      "id": "jd_shipping.return.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营误购退货，PLUS和非PLUS的运费一样吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "适用于京东自营商品：客户原因退换货，非PLUS会员承担运费，PLUS会员由京东承担；非客户原因退换货，两类会员均由京东承担。客户原因包括误购和七天无理由。",
+      "relevant_chunk_ids": [
+        "jd_shipping.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.return",
+        "jd_shipping.reimburse",
+        "jd_coupon.freight",
+        "jd_shipping.pickup",
+        "jd_freight_insurance.amount"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.return.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营商品质量有问题，我不是PLUS，退换运费谁出？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "适用于京东自营商品：客户原因退换货，非PLUS会员承担运费，PLUS会员由京东承担；非客户原因退换货，两类会员均由京东承担。客户原因包括误购和七天无理由。",
+      "relevant_chunk_ids": [
+        "jd_shipping.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.return",
+        "jd_returns.personal",
+        "jd_shipping.reimburse",
+        "jd_returns.damage",
+        "jd_returns.defect"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.repair.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营商品故障维修，保内和保外运费有什么区别？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营维修场景，人为损坏等原因运费由客户承担；商品故障在保修期内由京东承担，保修期外由客户承担。",
+      "relevant_chunk_ids": [
+        "jd_shipping.repair"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.repair",
+        "jd_shipping.return",
+        "jd_returns.defect",
+        "jd_returns.damage",
+        "jd_shipping.reimburse"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.repair.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营商品被我人为弄坏，维修寄回的钱谁付？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营维修场景，人为损坏等原因运费由客户承担；商品故障在保修期内由京东承担，保修期外由客户承担。",
+      "relevant_chunk_ids": [
+        "jd_shipping.repair"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.repair",
+        "jd_shipping.reimburse",
+        "jd_returns.damage",
+        "jd_returns.personal",
+        "jd_shipping.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.pickup.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营退货取件收费在哪里看，怎么收？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营退货上门取件费用可在提交售后单时查看；需要收取取件费时，会从退款中扣除。不要将上门取件理解为无条件免费。",
+      "relevant_chunk_ids": [
+        "jd_shipping.pickup"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.pickup",
+        "jd_shipping.reimburse",
+        "jd_shipping.return",
+        "jd_returns.personal",
+        "jd_freight_insurance.tracking"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.pickup.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东安排人来拿退货就一定免费吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营退货上门取件费用可在提交售后单时查看；需要收取取件费时，会从退款中扣除。不要将上门取件理解为无条件免费。",
+      "relevant_chunk_ids": [
+        "jd_shipping.pickup"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.pickup",
+        "jd_shipping.return",
+        "jd_coupon.freight",
+        "jd_returns.personal",
+        "jd_shipping.reimburse"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.reimburse.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东承担售后运费，自己寄回还需要先付钱吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营商品自行快递寄回、且属于京东承担运费的情况，用户需先垫付，售后完成后依逆向运费补偿标准返还京东余额；该标准适用于中国大陆收货地址，不含港澳台。",
+      "relevant_chunk_ids": [
+        "jd_shipping.reimburse"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.reimburse",
+        "jd_freight_insurance.tracking",
+        "jd_shipping.return",
+        "jd_shipping.repair",
+        "jd_shipping.pickup"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.reimburse.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营售后快递费返还是现金吗，港澳台能直接套大陆标准吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营商品自行快递寄回、且属于京东承担运费的情况，用户需先垫付，售后完成后依逆向运费补偿标准返还京东余额；该标准适用于中国大陆收货地址，不含港澳台。",
+      "relevant_chunk_ids": [
+        "jd_shipping.reimburse"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.reimburse",
+        "jd_shipping.return",
+        "jd_shipping.pickup",
+        "jd_returns.personal",
+        "jd_shipping.repair"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.defect.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营确认质量故障后，退货和换货分别是什么期限？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营商品功能故障或质量问题，经指定或特约售后检测、或京东售后确认后，支持7天内退货、15天内换货，返回运费免收；当地无法检测时联系京东售后。",
+      "relevant_chunk_ids": [
+        "jd_returns.defect"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.defect",
+        "jd_returns.damage",
+        "jd_returns.personal",
+        "jd_exchange90.fault",
+        "jd_exchange90.scope"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.defect.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营机器有毛病，本地没法检测怎么办？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营商品功能故障或质量问题，经指定或特约售后检测、或京东售后确认后，支持7天内退货、15天内换货，返回运费免收；当地无法检测时联系京东售后。",
+      "relevant_chunk_ids": [
+        "jd_returns.defect"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.defect",
+        "jd_returns.damage",
+        "jd_returns.personal",
+        "jd_price.excluded",
+        "jd_delivery.inspection"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.damage.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营包裹运输破损，要多久反馈，需什么证据？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营商品运输破损等物流损应在收货后24小时内反馈。物流损、缺件或描述不符经核实，支持7天内退换且免返回运费；审核可能需要照片或快递人员证明。",
+      "relevant_chunk_ids": [
+        "jd_returns.damage"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.damage",
+        "jd_returns.defect",
+        "jd_shipping.reimburse",
+        "jd_shipping.repair",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.damage.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营到货缺配件，核实后退换还要付返回运费吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营商品运输破损等物流损应在收货后24小时内反馈。物流损、缺件或描述不符经核实，支持7天内退换且免返回运费；审核可能需要照片或快递人员证明。",
+      "relevant_chunk_ids": [
+        "jd_returns.damage"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.damage",
+        "jd_shipping.reimburse",
+        "jd_shipping.return",
+        "jd_returns.personal",
+        "jd_shipping.repair"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.personal.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营个人原因退货，需要商品和配件满足什么条件？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营个人原因退换需商品完好、附件齐全，支持7天内退换，但夺宝岛商品和明确不支持无理由退货的情形除外；运费权益需另外核对。",
+      "relevant_chunk_ids": [
+        "jd_returns.personal"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.personal",
+        "jd_returns.damage",
+        "jd_returns.defect",
+        "jd_shipping.reimburse",
+        "jd_shipping.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.personal.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营写了不支持无理由退货，还能直接套普通个人原因规则吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营个人原因退换需商品完好、附件齐全，支持7天内退换，但夺宝岛商品和明确不支持无理由退货的情形除外；运费权益需另外核对。",
+      "relevant_chunk_ids": [
+        "jd_returns.personal"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.personal",
+        "jd_shipping.return",
+        "jd_returns.defect",
+        "jd_returns.damage",
+        "jd_shipping.reimburse"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.period.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东第三方和普通自营订单的价保起算点相同吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东价保以商品服务标识为准。自营且非厂商配送订单的签收后周期从签收次日零点起算；第三方或厂商配送订单从提交订单时间起算，不能统一按签收日起算。",
+      "relevant_chunk_ids": [
+        "jd_price.period"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.period",
+        "jd_price.excluded",
+        "jd_price.status",
+        "jd_price.payment",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.period.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东厂商配送订单的价保，是从收到货才开始吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东价保以商品服务标识为准。自营且非厂商配送订单的签收后周期从签收次日零点起算；第三方或厂商配送订单从提交订单时间起算，不能统一按签收日起算。",
+      "relevant_chunk_ids": [
+        "jd_price.period"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.period",
+        "jd_price.excluded",
+        "jd_price.status",
+        "jd_price.payment",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.payment.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东白条支付立减造成差价，能申请价保吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东订单因支付券、白条券、支付立减或返现形成的差价，不支持价格保护；不能把支付阶段的优惠等同于商品降价。",
+      "relevant_chunk_ids": [
+        "jd_price.payment"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.payment",
+        "jd_price.status",
+        "jd_price.excluded",
+        "jd_price.period",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.payment.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "别人付款用支付券更便宜，我能让京东退这个差价吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东订单因支付券、白条券、支付立减或返现形成的差价，不支持价格保护；不能把支付阶段的优惠等同于商品降价。",
+      "relevant_chunk_ids": [
+        "jd_price.payment"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.payment",
+        "jd_coupon.freight",
+        "jd_coupon.return",
+        "jd_coupon.cancel",
+        "jd_coupon.scope"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.excluded.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东定制商品和生鲜短保品能申请价保吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东价保排除赠品、称重商品及含称重商品的订单、生鲜短保品、定制商品；已申请售后或售后换新订单也不支持。此处仅摘录部分排除项。",
+      "relevant_chunk_ids": [
+        "jd_price.excluded"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.excluded",
+        "jd_price.period",
+        "jd_price.status",
+        "jd_price.payment",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.excluded.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东订单已经申请售后了，还能接着申请价保吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东价保排除赠品、称重商品及含称重商品的订单、生鲜短保品、定制商品；已申请售后或售后换新订单也不支持。此处仅摘录部分排除项。",
+      "relevant_chunk_ids": [
+        "jd_price.excluded"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.status",
+        "jd_price.excluded",
+        "jd_price.period",
+        "jd_price.payment",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_price.status.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东价保记录和差价返还进度在哪里查？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东价保申请记录位于我的、客户服务、价格保护，可查看金额、退款进度和返还方式。尚未出库的订单需待发货后返还差价，发货前取消订单会使价保作废。",
+      "relevant_chunk_ids": [
+        "jd_price.status"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.status",
+        "jd_price.payment",
+        "jd_price.excluded",
+        "jd_price.period",
+        "jd_coupon.freight"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.status.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东价保成功但没发货，我又取消订单，差价还给吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东价保申请记录位于我的、客户服务、价格保护，可查看金额、退款进度和返还方式。尚未出库的订单需待发货后返还差价，发货前取消订单会使价保作废。",
+      "relevant_chunk_ids": [
+        "jd_price.status"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.status",
+        "jd_price.excluded",
+        "jd_price.payment",
+        "jd_price.period",
+        "jd_coupon.freight"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.scope.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东商品券能抵运费或换现金吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东商品优惠券抵商品款，不能抵运费或兑现；运费券抵京东自营商品订单运费。换购品以换购价购买时不能使用东券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.scope"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.scope",
+        "jd_coupon.freight",
+        "jd_coupon.cancel",
+        "jd_coupon.return",
+        "jd_price.payment"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.scope.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东运费券能当商品券用吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东商品优惠券抵商品款，不能抵运费或兑现；运费券抵京东自营商品订单运费。换购品以换购价购买时不能使用东券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.scope"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.scope",
+        "jd_coupon.freight",
+        "jd_coupon.return",
+        "jd_coupon.cancel",
+        "jd_shipping.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.cancel.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东用了东券的订单拆开了，只取消一个子单会返券吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "使用全品类、限品类或店铺东券的京东订单，未拆分时取消订单后自动返券；已经拆分时，需要取消全部子单才返券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.cancel"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.cancel",
+        "jd_coupon.freight",
+        "jd_coupon.return",
+        "jd_coupon.scope",
+        "jd_price.payment"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.cancel.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东未拆分订单取消成功，原先用掉的东券怎么办？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "使用全品类、限品类或店铺东券的京东订单，未拆分时取消订单后自动返券；已经拆分时，需要取消全部子单才返券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.cancel"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.cancel",
+        "jd_coupon.freight",
+        "jd_coupon.return",
+        "jd_ecard.balance",
+        "jd_coupon.scope"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.return.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东东券订单退货，要退完哪些商品才返券？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东使用全品类、限品类或店铺东券后，需使用该券的商品全部售后退货，系统才返还东券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.return",
+        "jd_coupon.cancel",
+        "jd_coupon.freight",
+        "jd_coupon.scope",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.return.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东一张东券买了几件，只退一件就能拿回整张券吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东使用全品类、限品类或店铺东券后，需使用该券的商品全部售后退货，系统才返还东券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.cancel",
+        "jd_coupon.return",
+        "jd_coupon.freight",
+        "jd_ecard.balance",
+        "jd_coupon.scope"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.freight.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东售前取消订单和售后退货，运费券返还一样吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东运费券在正常取消未拆分订单后返还；拆分订单须全部子单取消。因京东原因全部子单拒收可返还，但退货不返还运费券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.freight"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.freight",
+        "jd_coupon.cancel",
+        "jd_coupon.return",
+        "jd_shipping.return",
+        "jd_shipping.reimburse"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.freight.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东因为自身原因导致全部子单拒收，运费券能返吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东运费券在正常取消未拆分订单后返还；拆分订单须全部子单取消。因京东原因全部子单拒收可返还，但退货不返还运费券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.freight"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.freight",
+        "jd_coupon.cancel",
+        "jd_coupon.return",
+        "jd_coupon.scope",
+        "jd_shipping.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.balance.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东E卡剩下的钱会清零吗，不够付款怎么办？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东E卡不能兑现。未用完余额保留在卡内，在有效期内继续使用；支付不足部分可用其他支付方式补足。",
+      "relevant_chunk_ids": [
+        "jd_ecard.balance"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.balance",
+        "jd_ecard.extension",
+        "jd_ecard.invoice",
+        "jd_ecard.binding",
+        "jd_ecard.validity"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.balance.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东E卡还有一点余额，能直接提现吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东E卡不能兑现。未用完余额保留在卡内，在有效期内继续使用；支付不足部分可用其他支付方式补足。",
+      "relevant_chunk_ids": [
+        "jd_ecard.balance"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.balance",
+        "jd_ecard.invoice",
+        "jd_ecard.extension",
+        "jd_ecard.binding",
+        "jd_ecard.validity"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.binding.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东E卡绑错账号后能解绑重绑吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东E卡成功绑定后不能解绑、重新绑定或跨京东账户使用。",
+      "relevant_chunk_ids": [
+        "jd_ecard.binding"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.binding",
+        "jd_ecard.balance",
+        "jd_ecard.invoice",
+        "jd_ecard.extension",
+        "jd_ecard.validity"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.binding.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "我自己的京东E卡，能给另一个京东号结账吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东E卡成功绑定后不能解绑、重新绑定或跨京东账户使用。",
+      "relevant_chunk_ids": [
+        "jd_ecard.binding"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.balance",
+        "jd_ecard.binding",
+        "jd_ecard.invoice",
+        "jd_ecard.extension",
+        "jd_ecard.validity"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.validity.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东E卡都是三年过期吗，去哪看期限？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东记名E卡不设有效期；不记名卡有效期不短于三年或按购卡协议约定，从激活日计算。具体期限可在已绑定E卡明细查看。",
+      "relevant_chunk_ids": [
+        "jd_ecard.validity"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.extension",
+        "jd_ecard.validity",
+        "jd_ecard.balance",
+        "jd_ecard.invoice",
+        "jd_ecard.binding"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.validity.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东不记名E卡的有效期从哪天开始？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东记名E卡不设有效期；不记名卡有效期不短于三年或按购卡协议约定，从激活日计算。具体期限可在已绑定E卡明细查看。",
+      "relevant_chunk_ids": [
+        "jd_ecard.validity"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.validity",
+        "jd_ecard.extension",
+        "jd_ecard.invoice",
+        "jd_ecard.balance",
+        "jd_ecard.binding"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.extension.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东不记名E卡到期还有钱，能延期多久？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东不记名E卡过期但有余额时可提供延期，每张每次延长一个月；另有约定则按约定执行。",
+      "relevant_chunk_ids": [
+        "jd_ecard.extension"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.extension",
+        "jd_ecard.validity",
+        "jd_ecard.balance",
+        "jd_ecard.invoice",
+        "jd_ecard.binding"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.extension.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东E卡申请一次延期就能永久使用吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东不记名E卡过期但有余额时可提供延期，每张每次延长一个月；另有约定则按约定执行。",
+      "relevant_chunk_ids": [
+        "jd_ecard.extension"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.extension",
+        "jd_ecard.validity",
+        "jd_ecard.balance",
+        "jd_ecard.binding",
+        "jd_ecard.invoice"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.invoice.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东E卡付款部分能开普通金额发票吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东E卡支付部分不开具发票；因保修需要，可以开具零元发票。",
+      "relevant_chunk_ids": [
+        "jd_ecard.invoice"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.invoice",
+        "jd_ecard.balance",
+        "jd_invoice.download",
+        "jd_invoice.merchant",
+        "jd_invoice.paper"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.invoice.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东E卡买的东西要保修，能要零元发票吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东E卡支付部分不开具发票；因保修需要，可以开具零元发票。",
+      "relevant_chunk_ids": [
+        "jd_ecard.invoice"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.invoice",
+        "jd_ecard.balance",
+        "jd_invoice.paper",
+        "jd_ecard.extension",
+        "jd_invoice.merchant"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.merchant.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东第三方店铺的发票找谁开？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东自营商品开正规发票，图书可选择是否开票；发票金额含配送费，另有说明除外。第三方商品的开票和邮寄需联系商家。",
+      "relevant_chunk_ids": [
+        "jd_invoice.merchant"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.merchant",
+        "jd_ecard.invoice",
+        "jd_invoice.download",
+        "jd_invoice.qualification",
+        "jd_invoice.paper"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.merchant.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营图书必须开发票吗，配送费通常计入吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东自营商品开正规发票，图书可选择是否开票；发票金额含配送费，另有说明除外。第三方商品的开票和邮寄需联系商家。",
+      "relevant_chunk_ids": [
+        "jd_invoice.merchant"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.merchant",
+        "jd_ecard.invoice",
+        "jd_shipping.return",
+        "jd_shipping.reimburse",
+        "jd_shipping.pickup"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.download.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东普通电子发票在哪里下载？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东下单选择普通电子发票，订单完成后系统开具，可在我的订单、订单详情、发票信息下载。",
+      "relevant_chunk_ids": [
+        "jd_invoice.download"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.download",
+        "jd_invoice.paper",
+        "jd_ecard.invoice",
+        "jd_invoice.qualification",
+        "jd_invoice.merchant"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.download.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东下单选了电子票，是订单完成后才开吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东下单选择普通电子发票，订单完成后系统开具，可在我的订单、订单详情、发票信息下载。",
+      "relevant_chunk_ids": [
+        "jd_invoice.download"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.invoice",
+        "jd_invoice.download",
+        "jd_invoice.paper",
+        "jd_invoice.merchant",
+        "jd_coupon.cancel"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.paper.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东个人电子发票能改成个人普通纸质票吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东个人用户选择电子发票后，不能换取个人抬头的普通纸质发票。",
+      "relevant_chunk_ids": [
+        "jd_invoice.paper"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.paper",
+        "jd_invoice.download",
+        "jd_ecard.invoice",
+        "jd_invoice.qualification",
+        "jd_invoice.merchant"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.paper.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "我在京东选了个人电子票，现在想要纸质的可以吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东个人用户选择电子发票后，不能换取个人抬头的普通纸质发票。",
+      "relevant_chunk_ids": [
+        "jd_invoice.paper"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.paper",
+        "jd_invoice.download",
+        "jd_ecard.invoice",
+        "jd_invoice.merchant",
+        "jd_invoice.qualification"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.qualification.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东可以同时维护多套有效增票资质吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东增值税专用发票资质可在我的京东、账户设置、增票资质中维护；有效资质只支持一个，审核通过三十天后才可删除并重新上传。",
+      "relevant_chunk_ids": [
+        "jd_invoice.qualification"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.qualification",
+        "jd_ecard.invoice",
+        "jd_invoice.merchant",
+        "jd_invoice.paper",
+        "jd_invoice.download"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.qualification.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东增票资质刚审核通过，马上删掉重传可以吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东增值税专用发票资质可在我的京东、账户设置、增票资质中维护；有效资质只支持一个，审核通过三十天后才可删除并重新上传。",
+      "relevant_chunk_ids": [
+        "jd_invoice.qualification"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.qualification",
+        "jd_ecard.invoice",
+        "jd_delivery.refund_before_ship",
+        "jd_delivery.refusal_cost",
+        "jd_invoice.paper"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.refund_before_ship.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东我申请退款时还没发货，商家能直接发吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东消费者申请退款时尚未发货，卖家需征得消费者同意后再发货。未经同意发货应追回，消费者已签收并确认收货的情形除外。",
+      "relevant_chunk_ids": [
+        "jd_delivery.refund_before_ship"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.refund_before_ship",
+        "jd_shipping.reimburse",
+        "jd_freight_insurance.tracking",
+        "jd_returns.personal",
+        "jd_coupon.freight"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.refund_before_ship.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东商家没征求同意就在退款申请后发出，应该怎么处理？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东消费者申请退款时尚未发货，卖家需征得消费者同意后再发货。未经同意发货应追回，消费者已签收并确认收货的情形除外。",
+      "relevant_chunk_ids": [
+        "jd_delivery.refund_before_ship"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.refund_before_ship",
+        "jd_returns.personal",
+        "jd_coupon.freight",
+        "jd_delivery.refusal_cost",
+        "jd_price.status"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.pickup_consent.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东卖家临时要求我自己去指定地点提货，可以拒签吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东商品需要消费者到指定地点提取时，卖家应在商品页面显著说明，并在发货前告知、征得同意；违反该要求可拒签。",
+      "relevant_chunk_ids": [
+        "jd_delivery.pickup_consent"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.pickup_consent",
+        "jd_delivery.refusal_cost",
+        "jd_delivery.inspection",
+        "jd_delivery.proxy",
+        "jd_delivery.refund_before_ship"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.pickup_consent.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东需要自提的商品，商家发货前要告知并征求同意吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东商品需要消费者到指定地点提取时，卖家应在商品页面显著说明，并在发货前告知、征得同意；违反该要求可拒签。",
+      "relevant_chunk_ids": [
+        "jd_delivery.pickup_consent"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.pickup_consent",
+        "jd_delivery.refund_before_ship",
+        "jd_delivery.proxy",
+        "jd_delivery.refusal_cost",
+        "jd_delivery.inspection"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.proxy.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东快递委托家人签收算我签收吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东收货人可以委托他人代签，被委托人的签收按收货人本人签收处理。",
+      "relevant_chunk_ids": [
+        "jd_delivery.proxy"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.proxy",
+        "jd_delivery.inspection",
+        "jd_delivery.refusal_cost",
+        "jd_delivery.pickup_consent",
+        "jd_delivery.refund_before_ship"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.proxy.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东不是我亲自签的，是我让朋友代签的，算收货吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东收货人可以委托他人代签，被委托人的签收按收货人本人签收处理。",
+      "relevant_chunk_ids": [
+        "jd_delivery.proxy"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.proxy",
+        "jd_delivery.refusal_cost",
+        "jd_delivery.pickup_consent",
+        "jd_delivery.refund_before_ship",
+        "jd_delivery.inspection"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.inspection.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东包裹要先签字再拆，怎么记录发现的异常？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东签收时应检查肉眼可判断的外观、数量等一致性，发现不一致可拒签；需先签再拆的应请承运人当场监督，异常记明并请其签字，或退回。",
+      "relevant_chunk_ids": [
+        "jd_delivery.inspection"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.inspection",
+        "jd_delivery.refusal_cost",
+        "jd_delivery.pickup_consent",
+        "jd_delivery.proxy",
+        "jd_returns.damage"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.inspection.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东验货发现数量明显不对可以拒签吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东签收时应检查肉眼可判断的外观、数量等一致性，发现不一致可拒签；需先签再拆的应请承运人当场监督，异常记明并请其签字，或退回。",
+      "relevant_chunk_ids": [
+        "jd_delivery.inspection"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.refusal_cost",
+        "jd_delivery.inspection",
+        "jd_delivery.refund_before_ship",
+        "jd_delivery.pickup_consent",
+        "jd_delivery.proxy"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.refusal_cost.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东无正当理由拒收就一定不用出运费吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东消费者没有正当理由拒签，运费由消费者承担；拒签后卖家怠于取回产生的额外运费、保管费由卖家承担。",
+      "relevant_chunk_ids": [
+        "jd_delivery.refusal_cost"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.refusal_cost",
+        "jd_shipping.return",
+        "jd_coupon.freight",
+        "jd_shipping.reimburse",
+        "jd_shipping.repair"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.refusal_cost.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东拒签后商家拖着不取回，增加的保管费谁承担？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东消费者没有正当理由拒签，运费由消费者承担；拒签后卖家怠于取回产生的额外运费、保管费由卖家承担。",
+      "relevant_chunk_ids": [
+        "jd_delivery.refusal_cost"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.refusal_cost",
+        "jd_delivery.refund_before_ship",
+        "jd_shipping.return",
+        "jd_shipping.pickup",
+        "jd_delivery.pickup_consent"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.scope.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东全部自营商品都支持90天只换不修吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东90天只换不修针对带相应服务标识的自营商品，主要覆盖自营电器，不能推定所有自营商品都享有。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.scope"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.scope",
+        "jd_exchange90.fault",
+        "jd_exchange90.review",
+        "jd_returns.defect",
+        "jd_returns.damage"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.scope.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东买电器如何判断是否有90天只换不修？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东90天只换不修针对带相应服务标识的自营商品，主要覆盖自营电器，不能推定所有自营商品都享有。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.scope"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.scope",
+        "jd_exchange90.review",
+        "jd_exchange90.fault",
+        "jd_returns.defect",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.fault.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东90天只换不修，是否任何损坏都能换？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "该京东服务要求商品在签收后90天内出现三包范围内硬件性能故障，属于免费维修范围；并非任意原因损坏都适用。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.fault"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.fault",
+        "jd_exchange90.scope",
+        "jd_exchange90.review",
+        "jd_returns.damage",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.fault.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东只换不修的90天是从签收后算吗，故障要满足什么条件？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "该京东服务要求商品在签收后90天内出现三包范围内硬件性能故障，属于免费维修范围；并非任意原因损坏都适用。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.fault"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.fault",
+        "jd_exchange90.review",
+        "jd_exchange90.scope",
+        "jd_returns.defect",
+        "jd_returns.damage"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.review.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东有90天只换不修标签，提交申请后就直接换新吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "满足京东90天只换不修条件可在线申请售后，审核通过安排一次取回检测或上门检测更换，结果以审核为准。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.review"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.scope",
+        "jd_exchange90.fault",
+        "jd_exchange90.review",
+        "jd_returns.personal",
+        "jd_returns.damage"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.3333333333333333
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.review.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东90天只换不修是取回检测还是上门检测？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "满足京东90天只换不修条件可在线申请售后，审核通过安排一次取回检测或上门检测更换，结果以审核为准。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.review"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.review",
+        "jd_exchange90.fault",
+        "jd_exchange90.scope",
+        "jd_returns.defect",
+        "jd_returns.damage"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_freight_insurance.tracking.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东运费险选择自己寄给厂商，运费先由谁支付？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东运费险场景选择自行快递寄回厂商时，用户先联系物流并支付费用，再在退换售后流程填写快递公司和寄回单号。",
+      "relevant_chunk_ids": [
+        "jd_freight_insurance.tracking"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_freight_insurance.amount",
+        "jd_freight_insurance.tracking",
+        "jd_shipping.reimburse",
+        "jd_shipping.repair",
+        "jd_delivery.refusal_cost"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_freight_insurance.tracking.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自己寄回厂商后，需要在哪补填物流信息？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东运费险场景选择自行快递寄回厂商时，用户先联系物流并支付费用，再在退换售后流程填写快递公司和寄回单号。",
+      "relevant_chunk_ids": [
+        "jd_freight_insurance.tracking"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_freight_insurance.tracking",
+        "jd_shipping.reimburse",
+        "jd_freight_insurance.amount",
+        "jd_returns.damage",
+        "jd_delivery.refund_before_ship"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_freight_insurance.amount.q1",
+      "mode": "CHROMA_HNSW",
+      "query": "京东运费险自己寄厂商，花多少就赔多少吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "该京东厂商寄回场景在厂商收货后，按首重一公斤以内的收发城市路线最低价格判断赔付额，并赔至售后指定账户；不等于全部实付运费。",
+      "relevant_chunk_ids": [
+        "jd_freight_insurance.amount"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_freight_insurance.amount",
+        "jd_freight_insurance.tracking",
+        "jd_shipping.repair",
+        "jd_shipping.reimburse",
+        "jd_shipping.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_freight_insurance.amount.q2",
+      "mode": "CHROMA_HNSW",
+      "query": "京东寄回厂商的运费险按什么标准判断金额？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "该京东厂商寄回场景在厂商收货后，按首重一公斤以内的收发城市路线最低价格判断赔付额，并赔至售后指定账户；不等于全部实付运费。",
+      "relevant_chunk_ids": [
+        "jd_freight_insurance.amount"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_freight_insurance.amount",
+        "jd_freight_insurance.tracking",
+        "jd_shipping.reimburse",
+        "jd_delivery.refusal_cost",
+        "jd_shipping.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_cross_01",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营误购，我不是PLUS；如果自己寄回和上门取件，费用该怎么判断？",
+      "type": "multi_evidence",
+      "split": "test",
+      "reference_answer": "非PLUS客户因误购退货承担运费；上门取件收费可在售后单查看，需要收取时从退款扣除。不要承诺一个固定金额。",
+      "relevant_chunk_ids": [
+        "jd_shipping.return",
+        "jd_shipping.pickup"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.pickup",
+        "jd_shipping.return",
+        "jd_shipping.reimburse",
+        "jd_freight_insurance.tracking",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 0.5,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.6666666666666666,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_cross_02",
+      "mode": "CHROMA_HNSW",
+      "query": "京东自营商品确认质量问题后，退换期限和运费怎么处理？",
+      "type": "multi_evidence",
+      "split": "test",
+      "reference_answer": "经规定渠道确认质量问题，7天内退货、15天内换货，返回运费免收；自营非客户原因退换，不论是否PLUS，运费由京东承担。",
+      "relevant_chunk_ids": [
+        "jd_returns.defect",
+        "jd_shipping.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.defect",
+        "jd_returns.damage",
+        "jd_shipping.return",
+        "jd_returns.personal",
+        "jd_shipping.reimburse"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 0.5,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.6666666666666666,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_cross_03",
+      "mode": "CHROMA_HNSW",
+      "query": "京东订单用了东券和运费券，全部售后退货后两种券都会返吗？",
+      "type": "multi_evidence",
+      "split": "dev",
+      "reference_answer": "使用该东券的商品全部售后退货，系统返还东券；退货不返还运费券，不能将两类券混同。",
+      "relevant_chunk_ids": [
+        "jd_coupon.return",
+        "jd_coupon.freight"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.return",
+        "jd_coupon.cancel",
+        "jd_coupon.freight",
+        "jd_coupon.scope",
+        "jd_shipping.reimburse"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 0.5,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.6666666666666666,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_cross_04",
+      "mode": "CHROMA_HNSW",
+      "query": "京东商品券能付邮费吗？已经申请售后的订单还能申请价格保护吗？",
+      "type": "multi_evidence",
+      "split": "diagnostic",
+      "reference_answer": "商品券不能抵运费；已经申请售后的订单不支持价保。",
+      "relevant_chunk_ids": [
+        "jd_coupon.scope",
+        "jd_price.excluded"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.payment",
+        "jd_price.excluded",
+        "jd_coupon.freight",
+        "jd_coupon.scope",
+        "jd_coupon.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 0.5,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_negative_01",
+      "mode": "CHROMA_HNSW",
+      "query": "京东退货上门取件一定是12元吗？",
+      "type": "unsupported_premise",
+      "split": "test",
+      "reference_answer": "不能保证固定12元，费用需在提交售后单时查看。",
+      "relevant_chunk_ids": [
+        "jd_shipping.pickup"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.pickup",
+        "jd_delivery.refusal_cost",
+        "jd_freight_insurance.amount",
+        "jd_shipping.reimburse",
+        "jd_shipping.return"
+      ],
+      "answer": "无法确认“一定是12元”。检索上下文只说明：京东自营退货上门取件费用需在提交售后单时查看，若需收取会从退款中扣除，不能理解为无条件免费；但没有提到固定为12元。因此信息不足，不能确认上门取件一定是12元。",
+      "answer_tokens": 594
+    },
+    {
+      "id": "jd_negative_02",
+      "mode": "CHROMA_HNSW",
+      "query": "京东我的订单JD123能不能价保，准确退多少钱？",
+      "type": "requires_tool",
+      "split": "test",
+      "reference_answer": "需要订单、商品价保标识、当前价格等实时信息；本知识库不能确定具体资格或金额。",
+      "relevant_chunk_ids": [],
+      "retrieved_chunk_ids": [
+        "jd_price.excluded",
+        "jd_price.status",
+        "jd_price.period",
+        "jd_price.payment",
+        "jd_returns.personal"
+      ],
+      "answer": "仅凭订单号 **JD123**，无法确认能否价保，也无法给出准确退款金额。需要核对商品是否属于价保排除项、订单类型及价保期限、是否有支付优惠差价等；具体金额要在 **我的 → 客户服务 → 价格保护** 中查看。若订单尚未出库，需待发货后返还差价，发货前取消订单会使价保作废。",
+      "answer_tokens": 723
+    },
+    {
+      "id": "jd_negative_03",
+      "mode": "CHROMA_HNSW",
+      "query": "京东这个东西退货包邮吗？",
+      "type": "clarification",
+      "split": "test",
+      "reference_answer": "需先确认是否自营、退货原因和会员身份，不能无条件承诺包邮。",
+      "relevant_chunk_ids": [
+        "jd_shipping.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.reimburse",
+        "jd_shipping.return",
+        "jd_returns.personal",
+        "jd_coupon.freight",
+        "jd_shipping.pickup"
+      ],
+      "answer": "是否包邮要看具体情况，检索上下文只覆盖**京东自营商品**：\n\n- **非客户原因退货**：京东承担运费，相当于包邮。\n- **客户原因退货**（如误购、七天无理由）：**非PLUS会员承担运费；PLUS会员由京东承担**。\n- 若是自行寄回且属于京东承担运费：需先垫付，售后完成后按标准返还到京东余额。\n- 上门取件不一定免费，取件费可在提交售后单时查看，可能从退款中扣除。\n- 个人原因退换还需商品完好、附件齐全，且一般需在7天内，运费权益需另行核对。\n- 退货不返还运费券。\n\n如果不是京东自营商品，现有上下文不足以判断是否包邮。",
+      "answer_tokens": 836
+    },
+    {
+      "id": "jd_negative_04",
+      "mode": "CHROMA_HNSW",
+      "query": "京东PLUS退货规则能用于拼多多订单吗？",
+      "type": "platform_boundary",
+      "split": "test",
+      "reference_answer": "不能跨平台套用京东PLUS权益；需要拼多多对应规则。",
+      "relevant_chunk_ids": [],
+      "retrieved_chunk_ids": [
+        "jd_coupon.return",
+        "jd_coupon.freight",
+        "jd_returns.personal",
+        "jd_shipping.return",
+        "jd_coupon.cancel"
+      ],
+      "answer": "根据现有检索上下文，无法确认京东PLUS退货规则能否用于拼多多订单。上下文中的退货、运费及优惠券返还规则均明确针对京东自营商品或京东订单，未包含拼多多订单的适用规则。建议分别核对京东和拼多多各自的售后政策。",
+      "answer_tokens": 571
+    },
+    {
+      "id": "jd_shipping.return.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营误购退货，PLUS和非PLUS的运费一样吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "适用于京东自营商品：客户原因退换货，非PLUS会员承担运费，PLUS会员由京东承担；非客户原因退换货，两类会员均由京东承担。客户原因包括误购和七天无理由。",
+      "relevant_chunk_ids": [
+        "jd_shipping.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.return",
+        "jd_shipping.reimburse",
+        "jd_returns.personal",
+        "jd_coupon.freight",
+        "jd_returns.defect"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.return.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营商品质量有问题，我不是PLUS，退换运费谁出？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "适用于京东自营商品：客户原因退换货，非PLUS会员承担运费，PLUS会员由京东承担；非客户原因退换货，两类会员均由京东承担。客户原因包括误购和七天无理由。",
+      "relevant_chunk_ids": [
+        "jd_shipping.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.return",
+        "jd_returns.personal",
+        "jd_returns.defect",
+        "jd_shipping.reimburse",
+        "jd_returns.damage"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.repair.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营商品故障维修，保内和保外运费有什么区别？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营维修场景，人为损坏等原因运费由客户承担；商品故障在保修期内由京东承担，保修期外由客户承担。",
+      "relevant_chunk_ids": [
+        "jd_shipping.repair"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.repair",
+        "jd_shipping.return",
+        "jd_returns.defect",
+        "jd_exchange90.fault",
+        "jd_returns.damage"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.repair.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营商品被我人为弄坏，维修寄回的钱谁付？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营维修场景，人为损坏等原因运费由客户承担；商品故障在保修期内由京东承担，保修期外由客户承担。",
+      "relevant_chunk_ids": [
+        "jd_shipping.repair"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.repair",
+        "jd_shipping.reimburse",
+        "jd_delivery.proxy",
+        "jd_returns.damage",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.pickup.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营退货取件收费在哪里看，怎么收？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营退货上门取件费用可在提交售后单时查看；需要收取取件费时，会从退款中扣除。不要将上门取件理解为无条件免费。",
+      "relevant_chunk_ids": [
+        "jd_shipping.pickup"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.pickup",
+        "jd_returns.personal",
+        "jd_shipping.reimburse",
+        "jd_returns.defect",
+        "jd_shipping.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.pickup.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东安排人来拿退货就一定免费吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营退货上门取件费用可在提交售后单时查看；需要收取取件费时，会从退款中扣除。不要将上门取件理解为无条件免费。",
+      "relevant_chunk_ids": [
+        "jd_shipping.pickup"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.pickup",
+        "jd_coupon.freight",
+        "jd_shipping.return",
+        "jd_exchange90.review",
+        "jd_exchange90.fault"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.reimburse.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东承担售后运费，自己寄回还需要先付钱吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营商品自行快递寄回、且属于京东承担运费的情况，用户需先垫付，售后完成后依逆向运费补偿标准返还京东余额；该标准适用于中国大陆收货地址，不含港澳台。",
+      "relevant_chunk_ids": [
+        "jd_shipping.reimburse"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.reimburse",
+        "jd_freight_insurance.tracking",
+        "jd_shipping.return",
+        "jd_shipping.repair",
+        "jd_shipping.pickup"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_shipping.reimburse.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营售后快递费返还是现金吗，港澳台能直接套大陆标准吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营商品自行快递寄回、且属于京东承担运费的情况，用户需先垫付，售后完成后依逆向运费补偿标准返还京东余额；该标准适用于中国大陆收货地址，不含港澳台。",
+      "relevant_chunk_ids": [
+        "jd_shipping.reimburse"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.reimburse",
+        "jd_shipping.return",
+        "jd_coupon.return",
+        "jd_shipping.pickup",
+        "jd_coupon.freight"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.defect.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营确认质量故障后，退货和换货分别是什么期限？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营商品功能故障或质量问题，经指定或特约售后检测、或京东售后确认后，支持7天内退货、15天内换货，返回运费免收；当地无法检测时联系京东售后。",
+      "relevant_chunk_ids": [
+        "jd_returns.defect"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.defect",
+        "jd_returns.personal",
+        "jd_returns.damage",
+        "jd_shipping.repair",
+        "jd_exchange90.fault"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.defect.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营机器有毛病，本地没法检测怎么办？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营商品功能故障或质量问题，经指定或特约售后检测、或京东售后确认后，支持7天内退货、15天内换货，返回运费免收；当地无法检测时联系京东售后。",
+      "relevant_chunk_ids": [
+        "jd_returns.defect"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.defect",
+        "jd_returns.damage",
+        "jd_exchange90.review",
+        "jd_returns.personal",
+        "jd_ecard.extension"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.damage.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营包裹运输破损，要多久反馈，需什么证据？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营商品运输破损等物流损应在收货后24小时内反馈。物流损、缺件或描述不符经核实，支持7天内退换且免返回运费；审核可能需要照片或快递人员证明。",
+      "relevant_chunk_ids": [
+        "jd_returns.damage"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.damage",
+        "jd_returns.personal",
+        "jd_returns.defect",
+        "jd_shipping.reimburse",
+        "jd_invoice.merchant"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.damage.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营到货缺配件，核实后退换还要付返回运费吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营商品运输破损等物流损应在收货后24小时内反馈。物流损、缺件或描述不符经核实，支持7天内退换且免返回运费；审核可能需要照片或快递人员证明。",
+      "relevant_chunk_ids": [
+        "jd_returns.damage"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.damage",
+        "jd_shipping.reimburse",
+        "jd_returns.defect",
+        "jd_shipping.return",
+        "jd_coupon.scope"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.personal.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营个人原因退货，需要商品和配件满足什么条件？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东自营个人原因退换需商品完好、附件齐全，支持7天内退换，但夺宝岛商品和明确不支持无理由退货的情形除外；运费权益需另外核对。",
+      "relevant_chunk_ids": [
+        "jd_returns.personal"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.personal",
+        "jd_shipping.return",
+        "jd_returns.damage",
+        "jd_exchange90.review",
+        "jd_returns.defect"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_returns.personal.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营写了不支持无理由退货，还能直接套普通个人原因规则吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东自营个人原因退换需商品完好、附件齐全，支持7天内退换，但夺宝岛商品和明确不支持无理由退货的情形除外；运费权益需另外核对。",
+      "relevant_chunk_ids": [
+        "jd_returns.personal"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.personal",
+        "jd_shipping.return",
+        "jd_returns.defect",
+        "jd_invoice.paper",
+        "jd_returns.damage"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.period.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东第三方和普通自营订单的价保起算点相同吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东价保以商品服务标识为准。自营且非厂商配送订单的签收后周期从签收次日零点起算；第三方或厂商配送订单从提交订单时间起算，不能统一按签收日起算。",
+      "relevant_chunk_ids": [
+        "jd_price.period"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.status",
+        "jd_price.period",
+        "jd_price.excluded",
+        "jd_invoice.merchant",
+        "jd_invoice.download"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_price.period.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东厂商配送订单的价保，是从收到货才开始吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东价保以商品服务标识为准。自营且非厂商配送订单的签收后周期从签收次日零点起算；第三方或厂商配送订单从提交订单时间起算，不能统一按签收日起算。",
+      "relevant_chunk_ids": [
+        "jd_price.period"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.period",
+        "jd_price.status",
+        "jd_price.excluded",
+        "jd_freight_insurance.amount",
+        "jd_price.payment"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.payment.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东白条支付立减造成差价，能申请价保吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东订单因支付券、白条券、支付立减或返现形成的差价，不支持价格保护；不能把支付阶段的优惠等同于商品降价。",
+      "relevant_chunk_ids": [
+        "jd_price.payment"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.payment",
+        "jd_price.status",
+        "jd_price.excluded",
+        "jd_price.period",
+        "jd_ecard.balance"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.payment.q2",
+      "mode": "CHROMA_BM25",
+      "query": "别人付款用支付券更便宜，我能让京东退这个差价吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东订单因支付券、白条券、支付立减或返现形成的差价，不支持价格保护；不能把支付阶段的优惠等同于商品降价。",
+      "relevant_chunk_ids": [
+        "jd_price.payment"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.payment",
+        "jd_coupon.freight",
+        "jd_coupon.return",
+        "jd_ecard.balance",
+        "jd_coupon.cancel"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.excluded.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东定制商品和生鲜短保品能申请价保吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东价保排除赠品、称重商品及含称重商品的订单、生鲜短保品、定制商品；已申请售后或售后换新订单也不支持。此处仅摘录部分排除项。",
+      "relevant_chunk_ids": [
+        "jd_price.excluded"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.excluded",
+        "jd_price.status",
+        "jd_price.period",
+        "jd_exchange90.review",
+        "jd_price.payment"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.excluded.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东订单已经申请售后了，还能接着申请价保吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东价保排除赠品、称重商品及含称重商品的订单、生鲜短保品、定制商品；已申请售后或售后换新订单也不支持。此处仅摘录部分排除项。",
+      "relevant_chunk_ids": [
+        "jd_price.excluded"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.status",
+        "jd_price.excluded",
+        "jd_price.period",
+        "jd_exchange90.review",
+        "jd_price.payment"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_price.status.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东价保记录和差价返还进度在哪里查？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东价保申请记录位于我的、客户服务、价格保护，可查看金额、退款进度和返还方式。尚未出库的订单需待发货后返还差价，发货前取消订单会使价保作废。",
+      "relevant_chunk_ids": [
+        "jd_price.status"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.status",
+        "jd_price.payment",
+        "jd_coupon.freight",
+        "jd_price.excluded",
+        "jd_price.period"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_price.status.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东价保成功但没发货，我又取消订单，差价还给吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东价保申请记录位于我的、客户服务、价格保护，可查看金额、退款进度和返还方式。尚未出库的订单需待发货后返还差价，发货前取消订单会使价保作废。",
+      "relevant_chunk_ids": [
+        "jd_price.status"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.status",
+        "jd_coupon.freight",
+        "jd_price.excluded",
+        "jd_price.payment",
+        "jd_coupon.cancel"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.scope.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东商品券能抵运费或换现金吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东商品优惠券抵商品款，不能抵运费或兑现；运费券抵京东自营商品订单运费。换购品以换购价购买时不能使用东券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.scope"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.scope",
+        "jd_coupon.freight",
+        "jd_shipping.reimburse",
+        "jd_coupon.cancel",
+        "jd_shipping.repair"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.scope.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东运费券能当商品券用吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东商品优惠券抵商品款，不能抵运费或兑现；运费券抵京东自营商品订单运费。换购品以换购价购买时不能使用东券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.scope"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.scope",
+        "jd_coupon.freight",
+        "jd_shipping.return",
+        "jd_shipping.reimburse",
+        "jd_coupon.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.cancel.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东用了东券的订单拆开了，只取消一个子单会返券吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "使用全品类、限品类或店铺东券的京东订单，未拆分时取消订单后自动返券；已经拆分时，需要取消全部子单才返券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.cancel"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.cancel",
+        "jd_coupon.freight",
+        "jd_coupon.return",
+        "jd_invoice.qualification",
+        "jd_coupon.scope"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.cancel.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东未拆分订单取消成功，原先用掉的东券怎么办？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "使用全品类、限品类或店铺东券的京东订单，未拆分时取消订单后自动返券；已经拆分时，需要取消全部子单才返券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.cancel"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.cancel",
+        "jd_coupon.freight",
+        "jd_coupon.return",
+        "jd_price.status",
+        "jd_ecard.balance"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.return.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东东券订单退货，要退完哪些商品才返券？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东使用全品类、限品类或店铺东券后，需使用该券的商品全部售后退货，系统才返还东券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.return",
+        "jd_coupon.cancel",
+        "jd_coupon.freight",
+        "jd_coupon.scope",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.return.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东一张东券买了几件，只退一件就能拿回整张券吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东使用全品类、限品类或店铺东券后，需使用该券的商品全部售后退货，系统才返还东券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.freight",
+        "jd_coupon.cancel",
+        "jd_coupon.scope",
+        "jd_coupon.return",
+        "jd_price.payment"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": false,
+          "recall@3": 0.0,
+          "precision@3": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.25
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.freight.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东售前取消订单和售后退货，运费券返还一样吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东运费券在正常取消未拆分订单后返还；拆分订单须全部子单取消。因京东原因全部子单拒收可返还，但退货不返还运费券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.freight"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.freight",
+        "jd_coupon.cancel",
+        "jd_coupon.return",
+        "jd_price.status",
+        "jd_shipping.return"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_coupon.freight.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东因为自身原因导致全部子单拒收，运费券能返吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东运费券在正常取消未拆分订单后返还；拆分订单须全部子单取消。因京东原因全部子单拒收可返还，但退货不返还运费券。",
+      "relevant_chunk_ids": [
+        "jd_coupon.freight"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.freight",
+        "jd_coupon.cancel",
+        "jd_shipping.return",
+        "jd_coupon.return",
+        "jd_coupon.scope"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.balance.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东E卡剩下的钱会清零吗，不够付款怎么办？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东E卡不能兑现。未用完余额保留在卡内，在有效期内继续使用；支付不足部分可用其他支付方式补足。",
+      "relevant_chunk_ids": [
+        "jd_ecard.balance"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.invoice",
+        "jd_ecard.balance",
+        "jd_ecard.validity",
+        "jd_ecard.extension",
+        "jd_ecard.binding"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.balance.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东E卡还有一点余额，能直接提现吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东E卡不能兑现。未用完余额保留在卡内，在有效期内继续使用；支付不足部分可用其他支付方式补足。",
+      "relevant_chunk_ids": [
+        "jd_ecard.balance"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.balance",
+        "jd_ecard.extension",
+        "jd_ecard.invoice",
+        "jd_ecard.validity",
+        "jd_ecard.binding"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.binding.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东E卡绑错账号后能解绑重绑吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东E卡成功绑定后不能解绑、重新绑定或跨京东账户使用。",
+      "relevant_chunk_ids": [
+        "jd_ecard.binding"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.binding",
+        "jd_ecard.invoice",
+        "jd_ecard.balance",
+        "jd_ecard.validity",
+        "jd_ecard.extension"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.binding.q2",
+      "mode": "CHROMA_BM25",
+      "query": "我自己的京东E卡，能给另一个京东号结账吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东E卡成功绑定后不能解绑、重新绑定或跨京东账户使用。",
+      "relevant_chunk_ids": [
+        "jd_ecard.binding"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.invoice",
+        "jd_ecard.binding",
+        "jd_ecard.validity",
+        "jd_ecard.extension",
+        "jd_ecard.balance"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.validity.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东E卡都是三年过期吗，去哪看期限？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东记名E卡不设有效期；不记名卡有效期不短于三年或按购卡协议约定，从激活日计算。具体期限可在已绑定E卡明细查看。",
+      "relevant_chunk_ids": [
+        "jd_ecard.validity"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.extension",
+        "jd_ecard.validity",
+        "jd_ecard.invoice",
+        "jd_ecard.balance",
+        "jd_ecard.binding"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.validity.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东不记名E卡的有效期从哪天开始？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东记名E卡不设有效期；不记名卡有效期不短于三年或按购卡协议约定，从激活日计算。具体期限可在已绑定E卡明细查看。",
+      "relevant_chunk_ids": [
+        "jd_ecard.validity"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.validity",
+        "jd_ecard.extension",
+        "jd_ecard.invoice",
+        "jd_ecard.balance",
+        "jd_ecard.binding"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.extension.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东不记名E卡到期还有钱，能延期多久？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东不记名E卡过期但有余额时可提供延期，每张每次延长一个月；另有约定则按约定执行。",
+      "relevant_chunk_ids": [
+        "jd_ecard.extension"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.extension",
+        "jd_ecard.validity",
+        "jd_ecard.invoice",
+        "jd_ecard.balance",
+        "jd_ecard.binding"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.extension.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东E卡申请一次延期就能永久使用吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东不记名E卡过期但有余额时可提供延期，每张每次延长一个月；另有约定则按约定执行。",
+      "relevant_chunk_ids": [
+        "jd_ecard.extension"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.extension",
+        "jd_ecard.binding",
+        "jd_ecard.balance",
+        "jd_ecard.validity",
+        "jd_exchange90.review"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.invoice.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东E卡付款部分能开普通金额发票吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东E卡支付部分不开具发票；因保修需要，可以开具零元发票。",
+      "relevant_chunk_ids": [
+        "jd_ecard.invoice"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.invoice",
+        "jd_ecard.balance",
+        "jd_invoice.merchant",
+        "jd_invoice.download",
+        "jd_invoice.paper"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_ecard.invoice.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东E卡买的东西要保修，能要零元发票吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东E卡支付部分不开具发票；因保修需要，可以开具零元发票。",
+      "relevant_chunk_ids": [
+        "jd_ecard.invoice"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_ecard.invoice",
+        "jd_invoice.paper",
+        "jd_invoice.merchant",
+        "jd_ecard.balance",
+        "jd_invoice.download"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.merchant.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东第三方店铺的发票找谁开？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东自营商品开正规发票，图书可选择是否开票；发票金额含配送费，另有说明除外。第三方商品的开票和邮寄需联系商家。",
+      "relevant_chunk_ids": [
+        "jd_invoice.merchant"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.merchant",
+        "jd_invoice.download",
+        "jd_ecard.invoice",
+        "jd_invoice.paper",
+        "jd_invoice.qualification"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.merchant.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营图书必须开发票吗，配送费通常计入吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东自营商品开正规发票，图书可选择是否开票；发票金额含配送费，另有说明除外。第三方商品的开票和邮寄需联系商家。",
+      "relevant_chunk_ids": [
+        "jd_invoice.merchant"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.merchant",
+        "jd_shipping.return",
+        "jd_ecard.invoice",
+        "jd_exchange90.scope",
+        "jd_shipping.repair"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.download.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东普通电子发票在哪里下载？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东下单选择普通电子发票，订单完成后系统开具，可在我的订单、订单详情、发票信息下载。",
+      "relevant_chunk_ids": [
+        "jd_invoice.download"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.download",
+        "jd_invoice.paper",
+        "jd_ecard.invoice",
+        "jd_invoice.merchant",
+        "jd_invoice.qualification"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.download.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东下单选了电子票，是订单完成后才开吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东下单选择普通电子发票，订单完成后系统开具，可在我的订单、订单详情、发票信息下载。",
+      "relevant_chunk_ids": [
+        "jd_invoice.download"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.download",
+        "jd_invoice.paper",
+        "jd_coupon.cancel",
+        "jd_invoice.merchant",
+        "jd_ecard.invoice"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.paper.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东个人电子发票能改成个人普通纸质票吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东个人用户选择电子发票后，不能换取个人抬头的普通纸质发票。",
+      "relevant_chunk_ids": [
+        "jd_invoice.paper"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.paper",
+        "jd_invoice.download",
+        "jd_ecard.invoice",
+        "jd_invoice.merchant",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.paper.q2",
+      "mode": "CHROMA_BM25",
+      "query": "我在京东选了个人电子票，现在想要纸质的可以吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东个人用户选择电子发票后，不能换取个人抬头的普通纸质发票。",
+      "relevant_chunk_ids": [
+        "jd_invoice.paper"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.paper",
+        "jd_invoice.download",
+        "jd_ecard.invoice",
+        "jd_invoice.qualification",
+        "jd_delivery.proxy"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.qualification.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东可以同时维护多套有效增票资质吗？",
+      "type": "direct",
+      "split": "dev",
+      "reference_answer": "京东增值税专用发票资质可在我的京东、账户设置、增票资质中维护；有效资质只支持一个，审核通过三十天后才可删除并重新上传。",
+      "relevant_chunk_ids": [
+        "jd_invoice.qualification"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.qualification",
+        "jd_ecard.invoice",
+        "jd_delivery.proxy",
+        "jd_invoice.merchant",
+        "jd_invoice.paper"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_invoice.qualification.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东增票资质刚审核通过，马上删掉重传可以吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "dev",
+      "reference_answer": "京东增值税专用发票资质可在我的京东、账户设置、增票资质中维护；有效资质只支持一个，审核通过三十天后才可删除并重新上传。",
+      "relevant_chunk_ids": [
+        "jd_invoice.qualification"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_invoice.qualification",
+        "jd_ecard.invoice",
+        "jd_exchange90.review",
+        "jd_delivery.refund_before_ship",
+        "jd_delivery.proxy"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.refund_before_ship.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东我申请退款时还没发货，商家能直接发吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东消费者申请退款时尚未发货，卖家需征得消费者同意后再发货。未经同意发货应追回，消费者已签收并确认收货的情形除外。",
+      "relevant_chunk_ids": [
+        "jd_delivery.refund_before_ship"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.refund_before_ship",
+        "jd_shipping.reimburse",
+        "jd_price.status",
+        "jd_freight_insurance.tracking",
+        "jd_delivery.pickup_consent"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.refund_before_ship.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东商家没征求同意就在退款申请后发出，应该怎么处理？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东消费者申请退款时尚未发货，卖家需征得消费者同意后再发货。未经同意发货应追回，消费者已签收并确认收货的情形除外。",
+      "relevant_chunk_ids": [
+        "jd_delivery.refund_before_ship"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.refund_before_ship",
+        "jd_price.status",
+        "jd_returns.personal",
+        "jd_delivery.proxy",
+        "jd_coupon.freight"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.pickup_consent.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东卖家临时要求我自己去指定地点提货，可以拒签吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东商品需要消费者到指定地点提取时，卖家应在商品页面显著说明，并在发货前告知、征得同意；违反该要求可拒签。",
+      "relevant_chunk_ids": [
+        "jd_delivery.pickup_consent"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.pickup_consent",
+        "jd_delivery.refusal_cost",
+        "jd_delivery.proxy",
+        "jd_delivery.inspection",
+        "jd_ecard.invoice"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.pickup_consent.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东需要自提的商品，商家发货前要告知并征求同意吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东商品需要消费者到指定地点提取时，卖家应在商品页面显著说明，并在发货前告知、征得同意；违反该要求可拒签。",
+      "relevant_chunk_ids": [
+        "jd_delivery.pickup_consent"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.pickup_consent",
+        "jd_delivery.refund_before_ship",
+        "jd_delivery.proxy",
+        "jd_invoice.merchant",
+        "jd_delivery.refusal_cost"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.proxy.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东快递委托家人签收算我签收吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东收货人可以委托他人代签，被委托人的签收按收货人本人签收处理。",
+      "relevant_chunk_ids": [
+        "jd_delivery.proxy"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.proxy",
+        "jd_delivery.refund_before_ship",
+        "jd_delivery.inspection",
+        "jd_price.period",
+        "jd_delivery.refusal_cost"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.proxy.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东不是我亲自签的，是我让朋友代签的，算收货吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东收货人可以委托他人代签，被委托人的签收按收货人本人签收处理。",
+      "relevant_chunk_ids": [
+        "jd_delivery.proxy"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.proxy",
+        "jd_invoice.download",
+        "jd_delivery.refusal_cost",
+        "jd_delivery.pickup_consent",
+        "jd_price.status"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.inspection.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东包裹要先签字再拆，怎么记录发现的异常？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东签收时应检查肉眼可判断的外观、数量等一致性，发现不一致可拒签；需先签再拆的应请承运人当场监督，异常记明并请其签字，或退回。",
+      "relevant_chunk_ids": [
+        "jd_delivery.inspection"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.inspection",
+        "jd_delivery.refusal_cost",
+        "jd_freight_insurance.tracking",
+        "jd_delivery.pickup_consent",
+        "jd_price.status"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.inspection.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东验货发现数量明显不对可以拒签吗？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东签收时应检查肉眼可判断的外观、数量等一致性，发现不一致可拒签；需先签再拆的应请承运人当场监督，异常记明并请其签字，或退回。",
+      "relevant_chunk_ids": [
+        "jd_delivery.inspection"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.inspection",
+        "jd_delivery.refusal_cost",
+        "jd_delivery.proxy",
+        "jd_delivery.pickup_consent",
+        "jd_ecard.invoice"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.refusal_cost.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东无正当理由拒收就一定不用出运费吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东消费者没有正当理由拒签，运费由消费者承担；拒签后卖家怠于取回产生的额外运费、保管费由卖家承担。",
+      "relevant_chunk_ids": [
+        "jd_delivery.refusal_cost"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.refusal_cost",
+        "jd_shipping.return",
+        "jd_coupon.freight",
+        "jd_shipping.reimburse",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_delivery.refusal_cost.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东拒签后商家拖着不取回，增加的保管费谁承担？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东消费者没有正当理由拒签，运费由消费者承担；拒签后卖家怠于取回产生的额外运费、保管费由卖家承担。",
+      "relevant_chunk_ids": [
+        "jd_delivery.refusal_cost"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_delivery.refusal_cost",
+        "jd_delivery.refund_before_ship",
+        "jd_invoice.merchant",
+        "jd_shipping.return",
+        "jd_shipping.repair"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.scope.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东全部自营商品都支持90天只换不修吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东90天只换不修针对带相应服务标识的自营商品，主要覆盖自营电器，不能推定所有自营商品都享有。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.scope"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.scope",
+        "jd_exchange90.fault",
+        "jd_exchange90.review",
+        "jd_returns.defect",
+        "jd_price.excluded"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.scope.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东买电器如何判断是否有90天只换不修？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东90天只换不修针对带相应服务标识的自营商品，主要覆盖自营电器，不能推定所有自营商品都享有。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.scope"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.scope",
+        "jd_exchange90.review",
+        "jd_exchange90.fault",
+        "jd_ecard.extension",
+        "jd_returns.defect"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.fault.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东90天只换不修，是否任何损坏都能换？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "该京东服务要求商品在签收后90天内出现三包范围内硬件性能故障，属于免费维修范围；并非任意原因损坏都适用。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.fault"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.scope",
+        "jd_exchange90.fault",
+        "jd_exchange90.review",
+        "jd_returns.damage",
+        "jd_coupon.scope"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.fault.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东只换不修的90天是从签收后算吗，故障要满足什么条件？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "该京东服务要求商品在签收后90天内出现三包范围内硬件性能故障，属于免费维修范围；并非任意原因损坏都适用。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.fault"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.fault",
+        "jd_exchange90.review",
+        "jd_exchange90.scope",
+        "jd_returns.defect",
+        "jd_delivery.proxy"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.review.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东有90天只换不修标签，提交申请后就直接换新吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "满足京东90天只换不修条件可在线申请售后，审核通过安排一次取回检测或上门检测更换，结果以审核为准。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.review"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.scope",
+        "jd_exchange90.review",
+        "jd_exchange90.fault",
+        "jd_price.excluded",
+        "jd_returns.personal"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_exchange90.review.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东90天只换不修是取回检测还是上门检测？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "满足京东90天只换不修条件可在线申请售后，审核通过安排一次取回检测或上门检测更换，结果以审核为准。",
+      "relevant_chunk_ids": [
+        "jd_exchange90.review"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_exchange90.review",
+        "jd_exchange90.scope",
+        "jd_returns.defect",
+        "jd_exchange90.fault",
+        "jd_shipping.pickup"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_freight_insurance.tracking.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东运费险选择自己寄给厂商，运费先由谁支付？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "京东运费险场景选择自行快递寄回厂商时，用户先联系物流并支付费用，再在退换售后流程填写快递公司和寄回单号。",
+      "relevant_chunk_ids": [
+        "jd_freight_insurance.tracking"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_freight_insurance.amount",
+        "jd_freight_insurance.tracking",
+        "jd_shipping.reimburse",
+        "jd_price.payment",
+        "jd_shipping.repair"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_freight_insurance.tracking.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东自己寄回厂商后，需要在哪补填物流信息？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "京东运费险场景选择自行快递寄回厂商时，用户先联系物流并支付费用，再在退换售后流程填写快递公司和寄回单号。",
+      "relevant_chunk_ids": [
+        "jd_freight_insurance.tracking"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_freight_insurance.tracking",
+        "jd_freight_insurance.amount",
+        "jd_returns.damage",
+        "jd_shipping.reimburse",
+        "jd_invoice.download"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_freight_insurance.amount.q1",
+      "mode": "CHROMA_BM25",
+      "query": "京东运费险自己寄厂商，花多少就赔多少吗？",
+      "type": "direct",
+      "split": "test",
+      "reference_answer": "该京东厂商寄回场景在厂商收货后，按首重一公斤以内的收发城市路线最低价格判断赔付额，并赔至售后指定账户；不等于全部实付运费。",
+      "relevant_chunk_ids": [
+        "jd_freight_insurance.amount"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_freight_insurance.amount",
+        "jd_freight_insurance.tracking",
+        "jd_shipping.repair",
+        "jd_shipping.reimburse",
+        "jd_price.period"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_freight_insurance.amount.q2",
+      "mode": "CHROMA_BM25",
+      "query": "京东寄回厂商的运费险按什么标准判断金额？",
+      "type": "paraphrase_or_boundary",
+      "split": "test",
+      "reference_answer": "该京东厂商寄回场景在厂商收货后，按首重一公斤以内的收发城市路线最低价格判断赔付额，并赔至售后指定账户；不等于全部实付运费。",
+      "relevant_chunk_ids": [
+        "jd_freight_insurance.amount"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_freight_insurance.amount",
+        "jd_freight_insurance.tracking",
+        "jd_shipping.reimburse",
+        "jd_delivery.refusal_cost",
+        "jd_price.period"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 1.0,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.2,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_cross_01",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营误购，我不是PLUS；如果自己寄回和上门取件，费用该怎么判断？",
+      "type": "multi_evidence",
+      "split": "test",
+      "reference_answer": "非PLUS客户因误购退货承担运费；上门取件收费可在售后单查看，需要收取时从退款扣除。不要承诺一个固定金额。",
+      "relevant_chunk_ids": [
+        "jd_shipping.return",
+        "jd_shipping.pickup"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.pickup",
+        "jd_shipping.return",
+        "jd_freight_insurance.tracking",
+        "jd_shipping.reimburse",
+        "jd_freight_insurance.amount"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 0.5,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.6666666666666666,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_cross_02",
+      "mode": "CHROMA_BM25",
+      "query": "京东自营商品确认质量问题后，退换期限和运费怎么处理？",
+      "type": "multi_evidence",
+      "split": "test",
+      "reference_answer": "经规定渠道确认质量问题，7天内退货、15天内换货，返回运费免收；自营非客户原因退换，不论是否PLUS，运费由京东承担。",
+      "relevant_chunk_ids": [
+        "jd_returns.defect",
+        "jd_shipping.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_returns.defect",
+        "jd_returns.personal",
+        "jd_shipping.return",
+        "jd_returns.damage",
+        "jd_freight_insurance.tracking"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 0.5,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.6666666666666666,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_cross_03",
+      "mode": "CHROMA_BM25",
+      "query": "京东订单用了东券和运费券，全部售后退货后两种券都会返吗？",
+      "type": "multi_evidence",
+      "split": "dev",
+      "reference_answer": "使用该东券的商品全部售后退货，系统返还东券；退货不返还运费券，不能将两类券混同。",
+      "relevant_chunk_ids": [
+        "jd_coupon.return",
+        "jd_coupon.freight"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.return",
+        "jd_coupon.freight",
+        "jd_coupon.scope",
+        "jd_coupon.cancel",
+        "jd_price.payment"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": true,
+          "recall@1": 0.5,
+          "precision@1": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 1.0,
+          "precision@3": 0.6666666666666666,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "jd_cross_04",
+      "mode": "CHROMA_BM25",
+      "query": "京东商品券能付邮费吗？已经申请售后的订单还能申请价格保护吗？",
+      "type": "multi_evidence",
+      "split": "diagnostic",
+      "reference_answer": "商品券不能抵运费；已经申请售后的订单不支持价保。",
+      "relevant_chunk_ids": [
+        "jd_coupon.scope",
+        "jd_price.excluded"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_price.payment",
+        "jd_price.excluded",
+        "jd_price.status",
+        "jd_coupon.freight",
+        "jd_coupon.scope"
+      ],
+      "metrics": {
+        "1": {
+          "hit@1": false,
+          "recall@1": 0.0,
+          "precision@1": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "3": {
+          "hit@3": true,
+          "recall@3": 0.5,
+          "precision@3": 0.3333333333333333,
+          "reciprocal_rank": 0.5
+        },
+        "5": {
+          "hit@5": true,
+          "recall@5": 1.0,
+          "precision@5": 0.4,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "jd_negative_01",
+      "mode": "CHROMA_BM25",
+      "query": "京东退货上门取件一定是12元吗？",
+      "type": "unsupported_premise",
+      "split": "test",
+      "reference_answer": "不能保证固定12元，费用需在提交售后单时查看。",
+      "relevant_chunk_ids": [
+        "jd_shipping.pickup"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_shipping.pickup",
+        "jd_delivery.refusal_cost",
+        "jd_exchange90.review",
+        "jd_freight_insurance.amount",
+        "jd_coupon.return"
+      ],
+      "answer": "不是固定的 12 元。\n\n根据检索上下文，京东自营退货上门取件费用需在提交售后单时查看；如需收取取件费，会从退款中扣除。上下文没有提到“上门取件一定是 12 元”这一标准，因此无法确认固定为 12 元，具体金额应以提交售后单时页面显示为准。",
+      "answer_tokens": 580
+    },
+    {
+      "id": "jd_negative_02",
+      "mode": "CHROMA_BM25",
+      "query": "京东我的订单JD123能不能价保，准确退多少钱？",
+      "type": "requires_tool",
+      "split": "test",
+      "reference_answer": "需要订单、商品价保标识、当前价格等实时信息；本知识库不能确定具体资格或金额。",
+      "relevant_chunk_ids": [],
+      "retrieved_chunk_ids": [
+        "jd_price.status",
+        "jd_price.excluded",
+        "jd_price.period",
+        "jd_price.payment",
+        "jd_invoice.download"
+      ],
+      "answer": "仅凭订单号 JD123，无法判断该订单能否价保，也无法算出准确的退款金额。\n\n要判断该订单能否价保，需要知道：该订单是否属于自营或厂商配送订单、是否在价保期限内、购买商品是否属于排除范围（如赠品、称重商品、生鲜短保品、定制商品，或已申请售后等），以及差价是否仅由支付券、白条券、支付立减或返现形成。其中，仅由支付阶段优惠形成的差价不支持价保。\n\n准确金额需以价保申请记录中的实际核算为准：可在“我的—客户服务—价格保护”查看金额、退款进度和返还方式；尚未出库的订单需待发货后返还差价，若在发货前取消订单，则价保作废。",
+      "answer_tokens": 670
+    },
+    {
+      "id": "jd_negative_03",
+      "mode": "CHROMA_BM25",
+      "query": "京东这个东西退货包邮吗？",
+      "type": "clarification",
+      "split": "test",
+      "reference_answer": "需先确认是否自营、退货原因和会员身份，不能无条件承诺包邮。",
+      "relevant_chunk_ids": [
+        "jd_shipping.return"
+      ],
+      "retrieved_chunk_ids": [
+        "jd_coupon.freight",
+        "jd_returns.personal",
+        "jd_shipping.pickup",
+        "jd_shipping.reimburse",
+        "jd_coupon.return"
+      ],
+      "answer": "仅凭现有信息无法确定“这个东西”退货是否包邮，需要看具体商品及提交售后单时的运费提示。\n\n依据检索上下文：\n- 京东自营退货上门取件费用可在提交售后单时查看；需要收取取件费时会从退款中扣除，**不能理解为无条件免费**。\n- 若自行快递寄回且属于京东承担运费的情况，需先垫付，售后完成后按逆向运费补偿标准返还京东余额。\n- 个人原因退换还需商品完好、附件齐全等，**运费权益需另外核对**。\n- 退货不返还运费券。\n\n建议你在提交退货/售后单时查看页面显示的取件费用或运费承担方。",
+      "answer_tokens": 756
+    },
+    {
+      "id": "jd_negative_04",
+      "mode": "CHROMA_BM25",
+      "query": "京东PLUS退货规则能用于拼多多订单吗？",
+      "type": "platform_boundary",
+      "split": "test",
+      "reference_answer": "不能跨平台套用京东PLUS权益；需要拼多多对应规则。",
+      "relevant_chunk_ids": [],
+      "retrieved_chunk_ids": [
+        "jd_coupon.freight",
+        "jd_coupon.return",
+        "jd_shipping.return",
+        "jd_returns.personal",
+        "jd_invoice.download"
+      ],
+      "answer": "信息不足。检索上下文只包含京东的退货、运费券和售后规则，未说明京东PLUS退货规则是否适用于拼多多订单，因此无法据此判断。",
+      "answer_tokens": 557
+    }
+  ]
+}

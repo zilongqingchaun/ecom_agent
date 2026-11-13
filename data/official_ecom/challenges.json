@@ -1,0 +1,16 @@
+[
+  {"id":"pdd_cross_01","platform":"pdd","query":"拼多多商品质量有问题，商家不肯承担退货运费，该怎么处理？","relevant_chunk_ids":["pdd_protection.quality_shipping","pdd_protection.intervention"],"reference_answer":"上传质量问题凭证，审核通过后由商家承担全部运费；商家拒绝履行义务且协商不成，可以申请平台介入。","type":"multi_evidence","split":"test"},
+  {"id":"pdd_cross_02","platform":"pdd","query":"拼多多我想注销账号，从哪进入？通过后是不是所有信息都立即删光？","relevant_chunk_ids":["pdd_privacy.entry","pdd_privacy.data"],"reference_answer":"从个人中心、设置、账号与安全、账号注销查看，或联系官方客服。审核通过后删除或匿名化，存在法律法规例外，不能保证所有记录立即删除。","type":"multi_evidence","split":"test"},
+  {"id":"jd_cross_01","platform":"jd","query":"京东自营误购，我不是PLUS；如果自己寄回和上门取件，费用该怎么判断？","relevant_chunk_ids":["jd_shipping.return","jd_shipping.pickup"],"reference_answer":"非PLUS客户因误购退货承担运费；上门取件收费可在售后单查看，需要收取时从退款扣除。不要承诺一个固定金额。","type":"multi_evidence","split":"test"},
+  {"id":"jd_cross_02","platform":"jd","query":"京东自营商品确认质量问题后，退换期限和运费怎么处理？","relevant_chunk_ids":["jd_returns.defect","jd_shipping.return"],"reference_answer":"经规定渠道确认质量问题，7天内退货、15天内换货，返回运费免收；自营非客户原因退换，不论是否PLUS，运费由京东承担。","type":"multi_evidence","split":"test"},
+  {"id":"jd_cross_03","platform":"jd","query":"京东订单用了东券和运费券，全部售后退货后两种券都会返吗？","relevant_chunk_ids":["jd_coupon.return","jd_coupon.freight"],"reference_answer":"使用该东券的商品全部售后退货，系统返还东券；退货不返还运费券，不能将两类券混同。","type":"multi_evidence","split":"test"},
+  {"id":"jd_cross_04","platform":"jd","query":"京东商品券能付邮费吗？已经申请售后的订单还能申请价格保护吗？","relevant_chunk_ids":["jd_coupon.scope","jd_price.excluded"],"reference_answer":"商品券不能抵运费；已经申请售后的订单不支持价保。","type":"multi_evidence","split":"test"},
+  {"id":"pdd_negative_01","platform":"pdd","query":"拼多多钻石会员要消费满两万元才能升级吗？","relevant_chunk_ids":[],"reference_answer":"本知识包没有拼多多钻石会员升级规则，不能套用并夕夕模拟会员政策。请以平台展示或官方客服核实为准。","type":"unanswerable","split":"test"},
+  {"id":"pdd_negative_02","platform":"pdd","query":"拼多多我的订单PDD123退款什么时候到账？","relevant_chunk_ids":[],"reference_answer":"知识库不能查询具体订单状态或到账时间，需要订单查询工具或官方客服核实。","type":"requires_tool","split":"test"},
+  {"id":"pdd_negative_03","platform":"pdd","query":"拼多多注销以后30天内可以恢复吗？","relevant_chunk_ids":[],"reference_answer":"本知识包没有注销恢复期限，不能承诺30天内可恢复；应向官方客服核实。","type":"unanswerable","split":"test"},
+  {"id":"pdd_negative_04","platform":"pdd","query":"拼多多优惠券为什么用不了，给我这个活动的具体门槛。","relevant_chunk_ids":[],"reference_answer":"这里只收录帮助导航，没有该券或活动的门槛；需要券详情和活动规则，不能编造。","type":"clarification","split":"test"},
+  {"id":"jd_negative_01","platform":"jd","query":"京东退货上门取件一定是12元吗？","relevant_chunk_ids":["jd_shipping.pickup"],"reference_answer":"不能保证固定12元，费用需在提交售后单时查看。","type":"unsupported_premise","split":"test"},
+  {"id":"jd_negative_02","platform":"jd","query":"京东我的订单JD123能不能价保，准确退多少钱？","relevant_chunk_ids":[],"reference_answer":"需要订单、商品价保标识、当前价格等实时信息；本知识库不能确定具体资格或金额。","type":"requires_tool","split":"test"},
+  {"id":"jd_negative_03","platform":"jd","query":"京东这个东西退货包邮吗？","relevant_chunk_ids":["jd_shipping.return"],"reference_answer":"需先确认是否自营、退货原因和会员身份，不能无条件承诺包邮。","type":"clarification","split":"test"},
+  {"id":"jd_negative_04","platform":"jd","query":"京东PLUS退货规则能用于拼多多订单吗？","relevant_chunk_ids":[],"reference_answer":"不能跨平台套用京东PLUS权益；需要拼多多对应规则。","type":"platform_boundary","split":"test"}
+]

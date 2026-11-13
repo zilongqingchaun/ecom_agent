@@ -16,7 +16,7 @@ tool_mapping = {
 }
 
 
-# OpenAI Chat Completions 的 tools 参数格式。
+
 tool_definition: list[dict] = [
     {
         "type": "function",

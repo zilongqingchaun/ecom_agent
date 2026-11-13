@@ -1,0 +1,46 @@
+[
+  {
+    "id": "jd_negative_01",
+    "platform": "jd",
+    "query": "京东退货上门取件一定是12元吗？",
+    "relevant_chunk_ids": [
+      "jd_shipping.pickup"
+    ],
+    "reference_answer": "不能保证固定12元，费用需在提交售后单时查看。",
+    "type": "unsupported_premise",
+    "split": "test",
+    "family_id": "jd_negative_01"
+  },
+  {
+    "id": "jd_negative_02",
+    "platform": "jd",
+    "query": "京东我的订单JD123能不能价保，准确退多少钱？",
+    "relevant_chunk_ids": [],
+    "reference_answer": "需要订单、商品价保标识、当前价格等实时信息；本知识库不能确定具体资格或金额。",
+    "type": "requires_tool",
+    "split": "test",
+    "family_id": "jd_negative_02"
+  },
+  {
+    "id": "jd_negative_03",
+    "platform": "jd",
+    "query": "京东这个东西退货包邮吗？",
+    "relevant_chunk_ids": [
+      "jd_shipping.return"
+    ],
+    "reference_answer": "需先确认是否自营、退货原因和会员身份，不能无条件承诺包邮。",
+    "type": "clarification",
+    "split": "test",
+    "family_id": "jd_negative_03"
+  },
+  {
+    "id": "jd_negative_04",
+    "platform": "jd",
+    "query": "京东PLUS退货规则能用于拼多多订单吗？",
+    "relevant_chunk_ids": [],
+    "reference_answer": "不能跨平台套用京东PLUS权益；需要拼多多对应规则。",
+    "type": "platform_boundary",
+    "split": "test",
+    "family_id": "jd_negative_04"
+  }
+]

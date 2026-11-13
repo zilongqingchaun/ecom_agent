@@ -10,10 +10,6 @@ def query_logistics(tracking_number: str) -> dict:
     :param tracking_number: 物流编号
     :return: 物流轨迹字典，如果订单不存在则返回 None
     """
-    
-
-
-
     logistics_info = LOGISTICS.get(tracking_number)
     if not logistics_info:
         return {"success": False, "messages": f"物流编号 {tracking_number} 不存在或无物流信息。"}

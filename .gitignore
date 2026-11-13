@@ -4,6 +4,7 @@ venv/
 __pycache__/
 *.py[cod]
 /app/rag/backends/chroma_db/
+/data/official_ecom/exports/*/index_config.json
 /框架实现/
 .env.*
 !.env.example

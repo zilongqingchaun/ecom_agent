@@ -11,30 +11,24 @@ class ecom_single_agent:
     def __init__(self, model: str, temperature: float):
 
         self.client=OpenAI(api_key=settings.model_api_key, base_url=settings.base_url)
-
         self.model = model
         self.temperature = temperature
-
-        # session_path 指向会话 JSON 文件所在目录；文件名为 <user_id>.json
         self.session_path=settings.session_path
         self.user_id=settings.user_id
         self.raw_history: list[dict] = []
         self.summary: str = ""
         self.memory: MemoryManager | None = None
-        
         self.load_session()
         self._memory_saved_until = len(self.raw_history)
         if settings.memory_enable:
             self.memory = MemoryManager(settings.memory_path, self.user_id)
-        
         self.tool_manager= tool_manager  # 这里可以初始化工具管理器，用于处理工具调用
 
 
 
 
-    #编写chat方法，管理输入输出
+
     def chat(self, input_text: str):
-        #把input包装成字典加入历史记录
         user_message = {"role": "user", "content": input_text}
         self.raw_history.append(user_message)
         if settings.memory_enable and self.memory is not None:
@@ -93,7 +87,6 @@ class ecom_single_agent:
         event = {"type": "update", "messages": new_messages}
         if summary_changed:
             event["summary"] = self.summary
-        # 单次更新写成一行；只序列化新增消息，避免重写整段历史。
         with session_file.open("a", encoding="utf-8", newline="\n") as file:
             file.write(json.dumps(event, ensure_ascii=False, default=str) + "\n")
             file.flush()
@@ -103,22 +96,6 @@ class ecom_single_agent:
 
     def react_loop(self):
         #加载模型并调用模型进行推理，返回结果
-#openai：message基本格式
-# {
-#     'role': 'assistant',
-#     'content': None,
-#     'tool_calls': [
-#         {
-#             'id': 'call_abc',
-#             'type': 'function',
-#             'function': {
-#                 'name': 'get_weather',
-#                 'arguments': '{"city":"北京"}'
-#             }
-#         }
-#     ]
-# }
-        
         last_content = None
         for i in range(settings.react_step):
             prompted_messages=self.build_messages()
@@ -143,7 +120,6 @@ class ecom_single_agent:
 
                 return content
 
-            # 以 Chat Completions 接受的格式记录助手工具调用消息。
             self.raw_history.append({
                 "role": "assistant",
                 "content": message.content,
@@ -160,7 +136,6 @@ class ecom_single_agent:
                 ],
             })
 
-            #得到工具调用 工具的输出需要另外实现
             
             for tc in tool_calls:
                 tool_name = tc.function.name
@@ -187,24 +162,18 @@ class ecom_single_agent:
                     )
                 })
 
-        # 注意：这里不要 return
-        # 下一轮继续让 LLM 根据工具结果生成回复
-
         return "抱歉，处理步骤超过最大限制。"
-
         # 达到最大迭代次数时返回最后一段可用内容。
-        # return last_content or "工具调用次数已达到上限，请稍后重试。"
+
             
     def build_messages(self):
         messages: list[dict] = []
-        # 把记忆上下文附加到系统提示词；尚未配置 memory 时只使用基础提示词。
         system_prompt = SYSTEM_PROMPT
         if settings.memory_enable and self.memory is not None:
             memory_prompt = self.memory.build_memory_prompt()
             if memory_prompt:
                 system_prompt = f"{system_prompt}\n\n## 用户长短期记忆\n{memory_prompt}"
         messages.append({"role": "system", "content": system_prompt})
-        # 添加历史记录
         messages.extend(self.raw_history)
         return messages
 
@@ -265,7 +234,6 @@ class ecom_single_agent:
                 raise ValueError(f"会话文件中的 summary 必须是字符串：{legacy_file}")
             self.raw_history = history
             self.summary = summary
-
         # 旧 JSON 记录会在下次保存时迁移到 JSONL；JSONL 已存在时以日志为准。
         self._session_saved_until = 0 if not log_file.exists() else len(self.raw_history)
         self._session_saved_summary = "" if not log_file.exists() else self.summary

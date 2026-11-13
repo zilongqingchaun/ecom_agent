@@ -1,0 +1,284 @@
+[
+  {
+    "id": "pdd_protection.authenticity.q1",
+    "query": "拼多多所有假货都能按假一赔十处理吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_protection.authenticity"
+    ],
+    "reference_answer": "拼多多消费者购买到假冒品牌商品，且商品页面带假一赔十标识，可向商家主张该项保障。不能把这一标识权益扩大到所有商品。",
+    "family_id": "pdd_protection.authenticity",
+    "type": "direct",
+    "split": "test"
+  },
+  {
+    "id": "pdd_protection.authenticity.q2",
+    "query": "拼多多买到冒牌货，页面写了假一赔十，找谁主张？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_protection.authenticity"
+    ],
+    "reference_answer": "拼多多消费者购买到假冒品牌商品，且商品页面带假一赔十标识，可向商家主张该项保障。不能把这一标识权益扩大到所有商品。",
+    "family_id": "pdd_protection.authenticity",
+    "type": "paraphrase_or_boundary",
+    "split": "test"
+  },
+  {
+    "id": "pdd_protection.quality_shipping.q1",
+    "query": "拼多多商品有质量问题，退货运费谁承担，需要凭证吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_protection.quality_shipping"
+    ],
+    "reference_answer": "拼多多因质量问题退换货，需在退货申请页面上传问题凭证；经平台审核通过，由商家承担全部运费。",
+    "family_id": "pdd_protection.quality_shipping",
+    "type": "direct",
+    "split": "test"
+  },
+  {
+    "id": "pdd_protection.quality_shipping.q2",
+    "query": "拼多多东西坏了，上传照片通过审核后还要我出寄回的钱吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_protection.quality_shipping"
+    ],
+    "reference_answer": "拼多多因质量问题退换货，需在退货申请页面上传问题凭证；经平台审核通过，由商家承担全部运费。",
+    "family_id": "pdd_protection.quality_shipping",
+    "type": "paraphrase_or_boundary",
+    "split": "test"
+  },
+  {
+    "id": "pdd_protection.intervention.q1",
+    "query": "拼多多商家拒绝售后，协商不成可以怎么办？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_protection.intervention"
+    ],
+    "reference_answer": "拼多多商家拒绝履行保障义务、拒绝赔付或双方无法达成一致时，消费者可以申请平台介入。七天无理由退换货仍有法律规定的例外。",
+    "family_id": "pdd_protection.intervention",
+    "type": "direct",
+    "split": "test"
+  },
+  {
+    "id": "pdd_protection.intervention.q2",
+    "query": "拼多多店家不给处理，能让平台介入吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_protection.intervention"
+    ],
+    "reference_answer": "拼多多商家拒绝履行保障义务、拒绝赔付或双方无法达成一致时，消费者可以申请平台介入。七天无理由退换货仍有法律规定的例外。",
+    "family_id": "pdd_protection.intervention",
+    "type": "paraphrase_or_boundary",
+    "split": "test"
+  },
+  {
+    "id": "pdd_protection.deadline.q1",
+    "query": "拼多多自动确认收货后，主动申请平台售后的期限怎么算？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_protection.deadline"
+    ],
+    "reference_answer": "该消保计划规定，主动向拼多多申请投诉、维权或售后，应在下单或拼单成功后至确认收货后15天内提出；确认收货包含手动和自动确认。逾期平台有权不受理。",
+    "family_id": "pdd_protection.deadline",
+    "type": "direct",
+    "split": "test"
+  },
+  {
+    "id": "pdd_protection.deadline.q2",
+    "query": "拼多多不是我点的收货，是系统确认的，15天期限也适用吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_protection.deadline"
+    ],
+    "reference_answer": "该消保计划规定，主动向拼多多申请投诉、维权或售后，应在下单或拼单成功后至确认收货后15天内提出；确认收货包含手动和自动确认。逾期平台有权不受理。",
+    "family_id": "pdd_protection.deadline",
+    "type": "paraphrase_or_boundary",
+    "split": "test"
+  },
+  {
+    "id": "pdd_privacy.entry.q1",
+    "query": "拼多多账号注销入口在哪？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_privacy.entry"
+    ],
+    "reference_answer": "拼多多用户可在客户端个人中心的设置中进入账号与安全、账号注销，查看条件；也可联系官方客服输入注销了解办理方式。",
+    "family_id": "pdd_privacy.entry",
+    "type": "direct",
+    "split": "test"
+  },
+  {
+    "id": "pdd_privacy.entry.q2",
+    "query": "拼多多不想用了，找不到销号位置，能找客服吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_privacy.entry"
+    ],
+    "reference_answer": "拼多多用户可在客户端个人中心的设置中进入账号与安全、账号注销，查看条件；也可联系官方客服输入注销了解办理方式。",
+    "family_id": "pdd_privacy.entry",
+    "type": "paraphrase_or_boundary",
+    "split": "test"
+  },
+  {
+    "id": "pdd_privacy.data.q1",
+    "query": "拼多多注销审核通过后，个人信息怎么处理？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_privacy.data"
+    ],
+    "reference_answer": "拼多多账户注销申请经审核通过后，个人信息将被删除或匿名化，法律法规另有规定的情形除外。不能据此承诺所有记录立即删除。",
+    "family_id": "pdd_privacy.data",
+    "type": "direct",
+    "split": "test"
+  },
+  {
+    "id": "pdd_privacy.data.q2",
+    "query": "拼多多销号以后，能保证所有记录马上消失吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_privacy.data"
+    ],
+    "reference_answer": "拼多多账户注销申请经审核通过后，个人信息将被删除或匿名化，法律法规另有规定的情形除外。不能据此承诺所有记录立即删除。",
+    "family_id": "pdd_privacy.data",
+    "type": "paraphrase_or_boundary",
+    "split": "test"
+  },
+  {
+    "id": "pdd_privacy.response.q1",
+    "query": "拼多多处理个人信息请求，核验身份后多久答复？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_privacy.response"
+    ],
+    "reference_answer": "针对个人信息权利请求，拼多多可能先核验身份；身份验证无误后十五日内答复。该期限是请求答复期限，不是退款到账或注销完成承诺。",
+    "family_id": "pdd_privacy.response",
+    "type": "direct",
+    "split": "test"
+  },
+  {
+    "id": "pdd_privacy.response.q2",
+    "query": "拼多多隐私请求说十五日答复，是保证十五日退款吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_privacy.response"
+    ],
+    "reference_answer": "针对个人信息权利请求，拼多多可能先核验身份；身份验证无误后十五日内答复。该期限是请求答复期限，不是退款到账或注销完成承诺。",
+    "family_id": "pdd_privacy.response",
+    "type": "paraphrase_or_boundary",
+    "split": "test"
+  },
+  {
+    "id": "pdd_help.topics.q1",
+    "query": "拼多多优惠券用不了，官方帮助中心有对应入口吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_help.topics"
+    ],
+    "reference_answer": "拼多多官方帮助中心提供交易、退款售后、账户安全等问题入口，包括发货、未发货退款、优惠券无法使用及退换货。这里只核验了导航，不能由栏目名称推断详细办理条件。",
+    "family_id": "pdd_help.topics",
+    "type": "direct",
+    "split": "dev"
+  },
+  {
+    "id": "pdd_help.topics.q2",
+    "query": "拼多多帮助中心有未发货退款和账户安全栏目吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_help.topics"
+    ],
+    "reference_answer": "拼多多官方帮助中心提供交易、退款售后、账户安全等问题入口，包括发货、未发货退款、优惠券无法使用及退换货。这里只核验了导航，不能由栏目名称推断详细办理条件。",
+    "family_id": "pdd_help.topics",
+    "type": "paraphrase_or_boundary",
+    "split": "dev"
+  },
+  {
+    "id": "pdd_help.hours.q1",
+    "query": "拼多多消费者客服几点提供服务？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_help.hours"
+    ],
+    "reference_answer": "本次检索到的拼多多官方帮助中心标示消费者客服服务时间为8:00至23:00；该时间不是处理完成时限，实际入口展示变化时应重新核验。",
+    "family_id": "pdd_help.hours",
+    "type": "direct",
+    "split": "dev"
+  },
+  {
+    "id": "pdd_help.hours.q2",
+    "query": "拼多多客服时间写到23点，是说我的售后23点前必定处理完吗？",
+    "platform": "pdd",
+    "relevant_chunk_ids": [
+      "pdd_help.hours"
+    ],
+    "reference_answer": "本次检索到的拼多多官方帮助中心标示消费者客服服务时间为8:00至23:00；该时间不是处理完成时限，实际入口展示变化时应重新核验。",
+    "family_id": "pdd_help.hours",
+    "type": "paraphrase_or_boundary",
+    "split": "dev"
+  },
+  {
+    "id": "pdd_cross_01",
+    "platform": "pdd",
+    "query": "拼多多商品质量有问题，商家不肯承担退货运费，该怎么处理？",
+    "relevant_chunk_ids": [
+      "pdd_protection.quality_shipping",
+      "pdd_protection.intervention"
+    ],
+    "reference_answer": "上传质量问题凭证，审核通过后由商家承担全部运费；商家拒绝履行义务且协商不成，可以申请平台介入。",
+    "type": "multi_evidence",
+    "split": "test",
+    "family_id": "pdd_cross_01"
+  },
+  {
+    "id": "pdd_cross_02",
+    "platform": "pdd",
+    "query": "拼多多我想注销账号，从哪进入？通过后是不是所有信息都立即删光？",
+    "relevant_chunk_ids": [
+      "pdd_privacy.entry",
+      "pdd_privacy.data"
+    ],
+    "reference_answer": "从个人中心、设置、账号与安全、账号注销查看，或联系官方客服。审核通过后删除或匿名化，存在法律法规例外，不能保证所有记录立即删除。",
+    "type": "multi_evidence",
+    "split": "test",
+    "family_id": "pdd_cross_02"
+  },
+  {
+    "id": "pdd_negative_01",
+    "platform": "pdd",
+    "query": "拼多多钻石会员要消费满两万元才能升级吗？",
+    "relevant_chunk_ids": [],
+    "reference_answer": "本知识包没有拼多多钻石会员升级规则，不能套用并夕夕模拟会员政策。请以平台展示或官方客服核实为准。",
+    "type": "unanswerable",
+    "split": "test",
+    "family_id": "pdd_negative_01"
+  },
+  {
+    "id": "pdd_negative_02",
+    "platform": "pdd",
+    "query": "拼多多我的订单PDD123退款什么时候到账？",
+    "relevant_chunk_ids": [],
+    "reference_answer": "知识库不能查询具体订单状态或到账时间，需要订单查询工具或官方客服核实。",
+    "type": "requires_tool",
+    "split": "test",
+    "family_id": "pdd_negative_02"
+  },
+  {
+    "id": "pdd_negative_03",
+    "platform": "pdd",
+    "query": "拼多多注销以后30天内可以恢复吗？",
+    "relevant_chunk_ids": [],
+    "reference_answer": "本知识包没有注销恢复期限，不能承诺30天内可恢复；应向官方客服核实。",
+    "type": "unanswerable",
+    "split": "test",
+    "family_id": "pdd_negative_03"
+  },
+  {
+    "id": "pdd_negative_04",
+    "platform": "pdd",
+    "query": "拼多多优惠券为什么用不了，给我这个活动的具体门槛。",
+    "relevant_chunk_ids": [],
+    "reference_answer": "这里只收录帮助导航，没有该券或活动的门槛；需要券详情和活动规则，不能编造。",
+    "type": "clarification",
+    "split": "test",
+    "family_id": "pdd_negative_04"
+  }
+]

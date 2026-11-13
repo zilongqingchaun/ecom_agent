@@ -1,9 +1,5 @@
 from app.tool_manager.mock_data import PRODUCTS
 
-#分为两种：精确查询和模糊查询。
-#前者只要输入商品的完整名称或ID，就能返回该商品的详细信息。
-#后者需要关键词查询，"name"、"description"、"specs"、三个字段拼接，用关键词检索
-
 def query_product(keyword:str)->dict:
     """按商品 ID、完整名称或关键词查询商品信息。
 
